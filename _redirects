@@ -1,0 +1,31 @@
+# Canonical URL hygiene (Netlify already handles primary domain + HTTPS)
+# Keep redirects minimal to avoid loops.
+
+# Root
+/index.html            /                       301
+
+# Pretty URLs (folders)
+/about                 /about/                 301
+/events                /events/                301
+/team                  /team/                  301
+
+# Team member pages (ensure trailing slash)
+/team/kadeem-campbell   /team/kadeem-campbell/   301
+/team/jenai-edwards     /team/jenai-edwards/     301
+/team/rihanna-kyeremateng  /team/rihanna-kyeremateng/  301
+
+# Legacy .html routes (if any)
+/about.html            /about/                 301
+/events.html           /events/                301
+/team.html             /team/                  301
+
+# Retired legacy pages
+/events-tech-mixer.html    /events/            301
+/tech0mixer               /events/             301
+/tech0mixer/*             /events/             301
+
+# RFC 9116 security.txt support (serve the same file at both locations)
+/.well-known/security.txt  /security.txt       200
+
+# Keep security.txt reachable from root too (some scanners expect it)
+/security.txt          /security.txt           200

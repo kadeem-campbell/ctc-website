@@ -1,0 +1,11 @@
+/* TEAM */
+Founder: Kadeem Campbell
+Founder: Jenai Edwards
+Founder: Rhianna Kyeremateng
+
+/* SITE */
+Language: English (UK)
+Doctype: HTML5
+
+/* THANKS */
+Community members and partners who support Caribbean Tech Collective.

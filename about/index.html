@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<meta content="Caribbean tech, Caribbean professionals, Caribbean networking, Caribbean community, Black professionals in tech, Black in tech networking, Black networking London, Caribbean diaspora in tech, Caribbean founders, Caribbean engineers, Caribbean product managers, Caribbean data science, Caribbean AI, Third space community, Professional networking London, Caribbean tech community London, Caribbean in tech UK, Black in tech community UK, Caribbean networking London" name="keywords"/>
+<meta content="Community for Caribbean professionals in tech, AI, and data." name="ai-summary"/>
+<meta content="Caribbean tech, Caribbean professionals, Caribbean networking, Caribbean community, Black professionals in tech, Black in tech networking, Black networking London, Caribbean diaspora in tech, Caribbean founders, Caribbean engineers, Caribbean product managers, Caribbean data science, Caribbean AI, Third space community, Professional networking London" name="ai-keywords"/>
+<meta content="Caribbean tech community, professional networking, diaspora, product, data, engineering" name="ai-topic"/>
+<meta content="vector-db-ready" name="embedding-hint"/>
+<meta content="dark light" name="color-scheme"/>
+<meta content="#0B3D2E" name="theme-color"/>
+<link href="https://caribbeantechcollective.com/about/" hreflang="en-gb" rel="alternate"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="2ce4406c58b54ca4915c3fb0e7d907c7f693caecc9f3e5eb098206c075530d1e" name="content-signature"/>
+<meta content="verified-source" name="content-tier"/>
+<link href="/icons/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
+<link href="/manifest.webmanifest" rel="manifest"/>
+<link href="/feed.xml" rel="alternate" title="Caribbean Tech Collective RSS" type="application/rss+xml"/>
+<link href="/feed.json" rel="alternate" title="Caribbean Tech Collective JSON Feed" type="application/feed+json"/>
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
+<link rel="alternate" type="text/plain" title="LLMs" href="/llms.txt"/>
+<link crossorigin="" href="https://cdn.prod.website-files.com" rel="preconnect"/>
+<link href="https://cdn.prod.website-files.com" rel="dns-prefetch"/>
+<link crossorigin="" href="https://cdnjs.cloudflare.com" rel="preconnect"/>
+<link href="https://cdnjs.cloudflare.com" rel="dns-prefetch"/>
+<link as="font" crossorigin="" href="https://cdn.prod.website-files.com/685a8185af94af38590f5c06/689c8e2a0b6d13455b2ed8b6_PPGatwick-JumboExtralight.woff2" rel="preload" type="font/woff2"/>
+<link as="font" crossorigin="" href="https://cdn.prod.website-files.com/685a8185af94af38590f5c06/685a86efe87d6fa227069273_SourceSans3-SemiBold.woff2" rel="preload" type="font/woff2"/>
+<link rel="preload" as="image" href="/cards/967A4202.webp" type="image/webp" fetchpriority="high"/>
+<title>About | Caribbean Tech Collective</title>
+
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" name="viewport"/>
+<meta name="description" content="About Caribbean Tech Collective, a UK community connecting Caribbean professionals, founders, engineers and investors in technology">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+
+
+
+
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (prefers-contrast: more){
+  :root{ --text-muted: #cfcfcf; }
+}
+
+
+
+/* Skip link (visible only on focus) */
+.skip-link{
+  position:absolute;
+  top:10px;
+  left:10px;
+  padding:10px 14px;
+  background:#ffffff;
+  color:#000000;
+  border-radius:10px;
+  z-index:2000;
+  transform: translateY(-200%);
+  transition: transform 0.2s;
+  text-decoration:none;
+  font-weight:700;
+}
+.skip-link:focus{ transform: translateY(0); }
+
+
+/* --- FONTS --- */
+@font-face {
+  font-family: Ppgatwick;
+  src: url(https://cdn.prod.website-files.com/685a8185af94af38590f5c06/689c8e2a0b6d13455b2ed8b6_PPGatwick-JumboExtralight.woff2) format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: Ppgatwick;
+  src: url(https://cdn.prod.website-files.com/685a8185af94af38590f5c06/685a86efe87d6fa227069273_SourceSans3-SemiBold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("Graphik-Regular-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- GLOBAL DARK THEME --- */
+:root {
+  --bg-rich: radial-gradient(120% 100% at 50% 0%, #1a1a1a 0%, #000000 60%);
+  --text-main: #ffffff;
+  --text-muted: #999999;
+}
+
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: "Ppgatwick", sans-serif !important;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+
+/* --- 0. GLOBAL RESET (CRITICAL FOR FOOTER MATCH) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #ffffff;
+}
+
+html { background-color: #000000; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000 !important;
+  background-image: var(--bg-rich) !important;
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-main);
+  font-family: "Ppgatwick", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* FILM GRAIN */
+.noise-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 9000;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+
+.logo-short {
+  font-family: "Ppgatwick", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  transition: opacity 0.2s;
+}
+.logo-short:hover { opacity: 0.8; }
+
+.breadcrumb-divider {
+  color: rgba(255,255,255,0.3);
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.breadcrumb-current {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+
+.nav-link {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 15px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+.nav-link:hover { color: #fff; }
+
+
+/* --- 2. HERO SECTION --- */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 80px;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.hero-overlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 40px 48px;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+}
+.hero-title {
+  color: #fff;
+  font-family: "Ppgatwick", sans-serif;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* --- 3. SPLIT CONTENT LAYOUT --- */
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 80px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 48px 120px;
+  position: relative;
+  align-items: start;
+}
+
+.story-column { display: flex; flex-direction: column; gap: 60px; min-width: 0; }
+
+.chapter-title {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 20px;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+.chapter-text {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  font-weight: 400;
+  max-width: 700px;
+}
+.chapter-text p { margin-bottom: 24px; }
+
+.story-list { list-style: none; padding: 0; margin-bottom: 20px; }
+.story-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 16px;
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 18px;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.4;
+}
+.story-list li::before { content: "•"; position: absolute; left: 0; color: #fff; font-weight: bold; }
+
+.story-img {
+  width: 100%;
+  border-radius: 12px;
+  margin: 10px 0;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.1);
+  opacity: 0.95;
+}
+
+
+/* --- SIDEBAR: sticky + stops exactly at top of the image below (end of #aboutSplit) --- */
+.sticky-sidebar{
+  position: relative;
+  height: auto;
+  width: 380px;
+  max-width: 100%;
+  justify-self: end;
+  align-self: start;
+}
+
+/* tighten spacing so button sits close, no big dead gap */
+.sidebar-img-wrap{ margin-bottom: 12px; }
+.sidebar-title{ margin: 0 0 6px; }
+.sidebar-desc{ margin-bottom: 12px; }
+
+
+/* IMPORTANT: sidebar-card must NOT be sticky here (JS handles the perfect stop) */
+.sidebar-card{
+  position: relative;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 22px;
+  border-radius: 24px;
+  text-align: left;
+}
+
+
+.sidebar-img-wrap {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.sidebar-img-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.sidebar-title {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: #fff;
+}
+
+.sidebar-desc {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 16px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 14px;
+}
+
+.join-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+  padding: 14px;
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  margin-top: 0;
+}
+.join-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  background: #ffffff;
+}
+
+/* Mobile CTA block (hidden on desktop) */
+.mobile-join-wrap { display: none; }
+
+/* --- 4. STATIC IMAGE --- */
+.static-img-section {
+  padding: 0 48px 140px;
+  display: flex; justify-content: center;
+}
+.static-img-wrapper {
+  width: 100%;
+      margin-top: 100px;
+  height: 60vh;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.static-img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- 5. HEADINGS --- */
+.unified-headline {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 40px;
+  letter-spacing: -0.02em;
+}
+
+/* --- TESTIMONIALS --- */
+.testimonials-section { padding: 0 48px 140px; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.test-card {
+  padding: 40px 32px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.test-text {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: rgba(255,255,255,0.9);
+}
+.test-author {
+  margin-top: 32px;
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.5);
+}
+
+/* --- NEWS SECTION --- */
+.news-section { padding: 70px 48px 90px; } /* adds breathing room so it doesn't hit edges, still closes tight */
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.news-item { text-decoration: none; color: #fff; display: block; }
+.news-thumb {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.news-thumb-wrap{ position:relative; display:block; }
+.news-thumb-wrap .ext-icon{ position:absolute; top:12px; right:12px; width:18px; height:18px; margin-left:0;  border-radius: 999px;  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color:#111; opacity:0.9; pointer-events:none; }
+.news-thumb-wrap .ext-icon svg{ width:18px; height:18px; }
+.news-section{ }
+/* Make overlay match white section */
+.news-section .news-thumb-wrap .ext-icon{ position:absolute; top:12px; right:12px; width:18px; height:18px; margin-left:0;  border-radius: 999px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color:#111; opacity:0.9; pointer-events:none; }
+.news-item:hover .news-thumb-wrap .ext-icon{ opacity:1; transform: translateY(-1px); }
+.news-title {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.news-meta {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --- Stay Up To Date: white background + black text --- */
+.news-section {
+  background: #ffffff;
+  color: #000000;
+}
+.news-section .unified-headline { color: #000000; }
+.news-section .news-item { color: #000000; }
+.news-section .news-title { color: #000000; }
+.news-section .news-meta { color: rgba(0,0,0,0.6); }
+.news-section .news-thumb { border: 1px solid rgba(0,0,0,0.08); }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 900px) {
+
+  .split-layout { grid-template-columns: 1fr; padding: 0 20px 80px; gap: 40px; }
+  .sticky-sidebar { display: none !important; }
+
+
+  .static-img-section { padding: 0 20px 80px; }
+  .static-img-wrapper { height: 40vh; margin-top: 0px}
+
+  .testimonials-section { padding: 0 20px 80px; }
+  .news-section { padding: 55px 20px 70px; }
+
+  .testimonials-grid, .news-grid { grid-template-columns: 1fr; gap: 20px; }
+  .test-card { min-height: 200px; padding: 24px; }
+
+  .chapter-text { font-size: 18px; }
+  .chapter-title { font-size: 28px; }
+
+  .mobile-join-wrap { display: block; margin-top: 24px; max-width: 520px; }
+}
+
+
+@media (max-width: 768px) {
+    .hero-wrapper {
+        height: 50vh;
+        margin-bottom: 40px;
+    }
+}
+
+/* --- External link icon --- */
+.ext-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:16px;
+  height:16px;
+  margin-left:10px;
+  opacity:0.7;
+  transition:opacity 0.2s, transform 0.2s;
+}
+.ext-icon svg{ width:16px; height:16px; }
+a.ext-icon{ color: inherit; text-decoration:none; }
+a.ext-icon:hover{ opacity:1; transform: translateY(-1px); }
+
+/* Make authors look like a compact source row */
+.test-author{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.test-author .author-left{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  min-width:0;
+}
+
+.app-dock, .app-dock *{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+
+</style>
+<link href="/header.smooth.css" rel="stylesheet"/>
+<link href="/footer.css" rel="stylesheet"/>
+<link href="/dock.fixed.css" rel="stylesheet"/>
+<script defer="" src="/header.smooth.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><meta content="2026-02-09T00:00:00Z" name="last-modified"/><style data-a11y="reduced-motion">@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important;}}</style><link rel="canonical" href="https://caribbeantechcollective.com/about/">
+<meta name="author" content="Kadeem Campbell">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caribbean Tech Collective">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="About | Caribbean Tech Collective">
+<meta property="og:description" content="About Caribbean Tech Collective, a UK community connecting Caribbean professionals in technology">
+<meta property="og:url" content="https://caribbeantechcollective.com/about/">
+<meta property="og:image" content="https://caribbeantechcollective.com/cards/967A4202.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About | Caribbean Tech Collective">
+<meta name="twitter:description" content="About Caribbean Tech Collective, a UK community connecting Caribbean professionals in technology.">
+<meta name="twitter:image" content="https://caribbeantechcollective.com/cards/967A4202.webp">
+<link rel="me" href="https://www.linkedin.com/company/caribbean-tech-collective/">
+<link rel="me" href="https://www.instagram.com/caribbeantechcollective/">
+<link rel="me" href="https://www.tiktok.com/@caribbeantechcollective">
+<link rel="me" href="https://www.linkedin.com/in/kadeem-/">
+<link rel="me" href="https://find-and-update.company-information.service.gov.uk/company/16454317">
+<link rel="me" href="https://www.pocit.co.uk/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/">
+<link rel="me" href="https://www.voice-online.co.uk/">
+
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://caribbeantechcollective.com/#org","name":"Caribbean Tech Collective","url":"https://caribbeantechcollective.com/","logo":{"@type":"ImageObject","url":"https://caribbeantechcollective.com/icons/Logo.png","width":512,"height":512},"email":"team@caribbeantechcollective.com","sameAs":["https://www.linkedin.com/company/caribbean-tech-collective/","https://www.instagram.com/caribbeantechcollective/","https://www.tiktok.com/@caribbeantechcollective"],"founder":[{"@id":"https://caribbeantechcollective.com/team/kadeem-campbell/#person"},{"@id":"https://caribbeantechcollective.com/team/jenai-edwards/#person"},{"@id":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person"}]},{"@type":"WebSite","@id":"https://caribbeantechcollective.com/#website","url":"https://caribbeantechcollective.com/","name":"Caribbean Tech Collective","publisher":{"@id":"https://caribbeantechcollective.com/#org"},"inLanguage":"en-GB","potentialAction":{"@type":"SearchAction","target":"https://caribbeantechcollective.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/kadeem-campbell/#person","name":"Kadeem Campbell","url":"https://caribbeantechcollective.com/team/kadeem-campbell/","image":"https://caribbeantechcollective.com/cards/kadeem-campbell.webp","jobTitle":["Co-founder","Head of Platform"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"},"sameAs":["https://www.linkedin.com/in/kadeem-/","https://www.pocit.co.uk/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/","https://www.voice-online.co.uk/","https://find-and-update.company-information.service.gov.uk/company/16454317"],"knowsAbout":["Caribbean tech community in the UK","Caribbean professionals in technology","Product and operations leadership","Tech events and panel moderation","Community building","Go-to-market strategy"],"homeLocation":{"@type":"Place","name":"London, United Kingdom"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/jenai-edwards/#person","name":"Jenai Edwards","url":"https://caribbeantechcollective.com/team/jenai-edwards/","image":"https://caribbeantechcollective.com/img/jenai.webp","jobTitle":["Co-founder","Head of Brand"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person","name":"Rhianna Kyeremateng","url":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/","image":"https://caribbeantechcollective.com/img/rhianna.webp","jobTitle":["Co-founder","Head of Community"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"WebPage","@id":"https://caribbeantechcollective.com/about/#webpage","url":"https://caribbeantechcollective.com/about/","name":"About | Caribbean Tech Collective","isPartOf":{"@id":"https://caribbeantechcollective.com/#website"},"about":[{"@id":"https://caribbeantechcollective.com/#org"}],"inLanguage":"en-GB","description":"About Caribbean Tech Collective, a UK community connecting Caribbean professionals in tech through events, partnerships and shared opportunities.","primaryImageOfPage":{"@type":"ImageObject","url":"https://caribbeantechcollective.com/cards/967A4202.webp"}},{"@type":"BreadcrumbList","@id":"https://caribbeantechcollective.com/about/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://caribbeantechcollective.com/"},{"@type":"ListItem","position":2,"name":"About","item":"https://caribbeantechcollective.com/about/"}]}]}</script>
+</head>
+<body class="ctc-pad ctc-page"><a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<a class="skip-link" href="#mainContent">Skip to content</a>
+<div class="noise-overlay"></div>
+<!-- Header -->
+<header class="ctc-hdr" id="ctcHeader" role="banner">
+<div class="ctc-hdr__inner">
+<div class="ctc-hdr__left">
+<a aria-label="Caribbean Tech Collective home" class="ctc-hdr__logo" href="/">
+        CTC
+      </a>
+<!-- Breadcrumb (desktop only via CSS) -->
+<!--   <nav class="ctc-hdr__crumbs" aria-label="Breadcrumb">
+        <a class="ctc-hdr__crumb" href="/">About</a>
+     <span class="ctc-hdr__crumbSep" aria-hidden="true">/</span>
+        <a class="ctc-hdr__crumb ctc-hdr__crumb--current" href="#" aria-current="page">Page</a>
+      </nav>-->
+</div>
+<!-- Desktop nav -->
+<nav aria-label="Primary" class="ctc-hdr__nav">
+<a class="ctc-hdr__link" href="/events/">Events</a>
+<a class="ctc-hdr__link" href="/team/">Team</a>
+<a class="ctc-hdr__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Member</a>
+</nav>
+<!-- Mobile toggle -->
+<button aria-controls="ctcMobileMenu" aria-expanded="false" aria-label="Open menu" class="ctc-hdr__toggle" id="ctcMobileToggle" type="button">
+<span aria-hidden="true" class="ctc-hdr__burger"></span>
+</button>
+</div>
+<!-- Mobile menu -->
+<nav aria-hidden="true" aria-label="Mobile menu" class="ctc-mnav" id="ctcMobileMenu">
+<a class="ctc-mnav__link" href="/events/">Events</a>
+<a class="ctc-mnav__link" href="/about/">About</a>
+<a class="ctc-mnav__link" href="/team/">Team</a>
+<a class="ctc-mnav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Member</a>
+</nav>
+</header>
+<nav class="app-dock">
+<a class="dock-item" href="/events/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"></path></svg>
+<span>Events</span>
+</a>
+<a class="dock-item" href="/team/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+<span>Team</span>
+</a>
+<a class="dock-item dock-home" href="/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+</a>
+<a class="dock-item" href="/about/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+<span>About</span>
+</a>
+<a class="dock-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform" rel="noopener" target="_blank">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+<span>Join</span>
+</a>
+</nav>
+<main id="mainContent">
+<section class="hero-wrapper">
+<img alt="Community" class="hero-img" decoding="async" fetchpriority="high" loading="lazy" src="/cards/967A4202.webp"/>
+<div class="hero-overlay">
+<h1 class="hero-title">About Us</h1>
+</div>
+</section>
+<section class="split-layout" id="aboutSplit">
+<div class="story-column">
+<div class="story-chapter">
+<div class="chapter-text">
+<p>The Caribbean Tech Collective (CTC) is an organisation launched in July 2025 to connect founders, engineers, investors, and professionals of Caribbean background working within technology and technology-adjacent roles.</p>
+<p>CTC provides a platform for professional networking, collaboration, and knowledge sharing, with the objective of improving visibility and access to opportunity.</p>
+</div>
+</div>
+<div class="story-chapter">
+<img alt="Panel Discussion" class="story-img" decoding="async" loading="lazy" src="/cards/967A4385.webp"/>
+</div>
+<div class="story-chapter">
+<div class="chapter-title">Community Focus</div>
+<div class="chapter-text">
+<p>The Caribbean Tech Collective operates as a technology-centred organisation. Programming, discussion, and participation are focused on technology and technology-adjacent work.</p>
+<p>CTC prioritises supporting founders, engineers, investors and professionals, placing particular importance on bringing together individuals at similar stages of their professional journey.</p>
+<div class="mobile-join-wrap">
+<a class="join-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Member</a>
+</div>
+</div>
+</div>
+<div class="story-chapter">
+<div class="chapter-title">Participation Criteria</div>
+<div class="chapter-text">
+<ul class="story-list">
+<li>Caribbean background: Individuals of Caribbean descent, whether based in the Caribbean or across the global diaspora.</li>
+<li>Active building: Founders, investors, or operators actively building companies in the Caribbean.</li>
+<li>Professional involvement: Individuals working in technology or technology-adjacent fields.</li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="sticky-sidebar" id="aboutSidebar">
+<div class="sidebar-card" id="sidebarCard">
+<div class="sidebar-img-wrap">
+<img alt="Join Us" decoding="async" loading="lazy" src="/cards/ctc-team.webp"/>
+</div>
+<!--  <h3 class="sidebar-title">Join the Collective</h3>-->
+<p class="sidebar-desc">Connect with peers, find founders, and access exclusive events.</p>
+<a class="join-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Member</a>
+</div>
+</aside>
+</section>
+<section class="static-img-section">
+<div class="static-img-wrapper">
+<img alt="The Team" class="static-img" decoding="async" loading="lazy" src="/cards/967A4253.webp"/>
+</div>
+</section>
+<section class="testimonials-section" id="testimonials">
+<h2 class="unified-headline">What People Say</h2>
+<div class="testimonials-grid">
+<div class="test-card">
+<p class="test-text">"The panels were fantastic. ... It was a room full of Caribbeans doing incredible things across the UK tech collective and it felt powerful to be part of that space."</p>
+<div class="test-author"><span class="author-left">Talitha — Linkedin</span><a aria-label="Open Talitha — Linkedin in new tab" class="ext-icon" href="https://www.linkedin.com/posts/activity-7391052394983215104-QCmt?utm_source=share&utm_medium=member_desktop&rcm=ACoAACIdmmMBFzWY7mmn1eudq1p0HPWclmyO7Nk" rel="noopener noreferrer external" target="_blank"><svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1316_1677)">
+<path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="white"></path>
+</g>
+<defs>
+<clippath id="clip0_1316_1677">
+<rect fill="white" height="24" width="24"></rect>
+</clippath>
+</defs>
+</svg></a></div>
+</div>
+<div class="test-card">
+<p class="test-text">"There were all ages from people in early career to people much more tenured in their careers ... it was our food, our music, our people"</p>
+<div class="test-author"><span class="author-left">Afiya - TikTok</span><a aria-label="Open Afiya - TikTok in new tab" class="ext-icon" href="https://www.tiktok.com/@afiyatok/video/7573827011760819458?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank"><svg fill="currentColor" height="100%" viewbox="0 0 22 23" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(4, -2.5) scale(0.62)">
+<path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path>
+</g>
+</svg></a></div>
+</div>
+<div class="test-card">
+<p class="test-text">"Events specifically targeting British Caribbean professionals are so important. They acknowledge a growing problem and create unity across the Caribbean diaspora.
+
+"</p>
+<div class="test-author"><span class="author-left">Natalie - Linkedin</span><a aria-label="Open Natalie - Linkedin in new tab" class="ext-icon" href="https://www.linkedin.com/pulse/black-caribbean-people-only-make-up-1-3-uk-tech-natalie-scarlett-wgyfe" rel="noopener noreferrer external" target="_blank"><svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1316_1677)">
+<path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="white"></path>
+</g>
+<defs>
+<clippath id="clip0_1316_1677">
+<rect fill="white" height="24" width="24"></rect>
+</clippath>
+</defs>
+</svg></a></div>
+</div>
+</div>
+</section>
+<section class="news-section" id="news">
+<h2 class="unified-headline">Stay Up To Date</h2>
+<div class="news-grid">
+<a class="news-item" href="https://www.instagram.com/p/DOWdre4DH7d/" rel="noopener noreferrer external" target="_blank">
+<span class="news-thumb-wrap"><img alt="News" class="news-thumb" decoding="async" loading="lazy" src="/cards/967A4104.webp"/>
+<span aria-hidden="true" class="ext-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5h5v5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M10 14L19 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M19 14v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></span><h3 class="news-title">The glass ceiling as a Caribbean tech professional</h3>
+<div class="news-meta">BBC News</div>
+</a>
+<a class="news-item" href="https://www.voice-online.co.uk/news/community/2025/07/01/caribbean-tech-collective-launches-to-connect-british-caribbean-professionals-in-technology/" rel="noopener noreferrer external" target="_blank">
+<span class="news-thumb-wrap"><img alt="News" class="news-thumb" decoding="async" loading="lazy" src="/cards/967A4170.webp"/>
+<span aria-hidden="true" class="ext-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5h5v5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M10 14L19 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M19 14v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></span><h3 class="news-title">Launch of the Caribbean Tech Collective</h3>
+<div class="news-meta">The Voice</div>
+</a>
+<a class="news-item" href="https://peopleofcolorintech.com/articles/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/" rel="noopener noreferrer external" target="_blank">
+<span class="news-thumb-wrap"><img alt="News" class="news-thumb" decoding="async" loading="lazy" src="/cards/967A4253.webp"/>
+<span aria-hidden="true" class="ext-icon"><svg aria-hidden="true" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 5h5v5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M10 14L19 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M19 14v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></span></span><h3 class="news-title">Y Combinator of the Caribbean</h3>
+<div class="news-meta">POCIT</div>
+</a>
+</div>
+</section></main>
+<footer role="contentinfo">
+<div class="footer-ctc-footer-with-form">
+<div class="footer">
+<section class="footer-sc">
+<div class="full-container footer-s">
+<div class="container footer-s">
+<div class="footer-top">
+<div class="headline-h4">Contact Us</div>
+<div class="footer-email-row"><a class="footer-mail-2" href="mailto:team@caribbeantechcollective.com" aria-label="Email Caribbean Tech Collective">team@caribbeantechcollective.com</a><button class="footer-copy-btn" type="button" aria-label="Copy email address" data-copy="team@caribbeantechcollective.com">Copy</button></div>
+</div>
+<div class="ctc-vision-cursor"><p></p></div>
+<div class="footer-down">
+<div class="footer-info-block">
+<div class="footer-terms-links"></div>
+<div class="terms-link"></div>
+</div>
+<div aria-label="Social media links" class="footer-media-links" role="navigation">
+<a aria-label="Caribbean Tech Collective on TikTok" class="f-media-link w-inline-block" href="https://www.tiktok.com/@caribbeantechcollective?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="currentColor" height="100%" viewbox="0 0 22 23" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(4, -2.5) scale(0.62)">
+<path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path>
+</g>
+</svg>
+</div>
+</a>
+<a aria-label="Caribbean Tech Collective on Instagram" class="f-media-link w-inline-block" href="https://instagram.com/caribbeantechcollective?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 12C15 12.5933 14.8241 13.1734 14.4944 13.6667C14.1648 14.1601 13.6962 14.5446 13.1481 14.7716C12.5999 14.9987 11.9967 15.0581 11.4147 14.9424C10.8328 14.8266 10.2982 14.5409 9.87868 14.1213C9.45912 13.7018 9.1734 13.1672 9.05764 12.5853C8.94189 12.0033 9.0013 11.4001 9.22836 10.8519C9.45542 10.3038 9.83994 9.83524 10.3333 9.50559C10.8266 9.17595 11.4067 9 12 9C12.7949 9.00247 13.5565 9.31934 14.1186 9.88141C14.6807 10.4435 14.9975 11.2051 15 12ZM21.375 7.875V16.125C21.375 17.5174 20.8219 18.8527 19.8373 19.8373C18.8527 20.8219 17.5174 21.375 16.125 21.375H7.875C6.48261 21.375 5.14726 20.8219 4.16269 19.8373C3.17812 18.8527 2.625 17.5174 2.625 16.125V7.875C2.625 6.48261 3.17812 5.14726 4.16269 4.16269C5.14726 3.17812 6.48261 2.625 7.875 2.625H16.125C17.5174 2.625 18.8527 3.17812 19.8373 4.16269C20.8219 5.14726 21.375 6.48261 21.375 7.875ZM16.5 12C16.5 11.11 16.2361 10.24 15.7416 9.49993C15.2471 8.75991 14.5443 8.18314 13.7221 7.84254C12.8998 7.50195 11.995 7.41283 11.1221 7.58647C10.2492 7.7601 9.44736 8.18868 8.81802 8.81802C8.18868 9.44736 7.7601 10.2492 7.58647 11.1221C7.41283 11.995 7.50195 12.8998 7.84254 13.7221C8.18314 14.5443 8.75991 15.2471 9.49993 15.7416C10.24 16.2361 11.11 16.5 12 16.5C13.1935 16.5 14.3381 16.0259 15.182 15.182C16.0259 14.3381 16.5 13.1935 16.5 12ZM18 7.125C18 6.9025 17.934 6.68499 17.8104 6.49998C17.6868 6.31498 17.5111 6.17078 17.3055 6.08564C17.1 6.00049 16.8738 5.97821 16.6555 6.02162C16.4373 6.06502 16.2368 6.17217 16.0795 6.3295C15.9222 6.48684 15.815 6.68729 15.7716 6.90552C15.7282 7.12375 15.7505 7.34995 15.8356 7.55552C15.9208 7.76109 16.065 7.93679 16.25 8.0604C16.435 8.18402 16.6525 8.25 16.875 8.25C17.1734 8.25 17.4595 8.13147 17.6705 7.9205C17.8815 7.70952 18 7.42337 18 7.125Z" fill="currentColor"></path>
+</svg>
+</div>
+</a>
+<a aria-label="Caribbean Tech Collective on LinkedIn" class="f-media-link w-inline-block" href="https://www.linkedin.com/company/caribbean-tech-collective/?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1316_1677)">
+<path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="white"></path>
+</g>
+<defs>
+<clippath id="clip0_1316_1677">
+<rect fill="white" height="24" width="24"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</footer>
+<div class="ctc-footer-video-wrap">
+<video autoplay="" class="ctc-new-footer-video" loop="" muted="" playsinline="" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" preload="none">
+<source src="/vids/ctc.webm" type="video/webm"/>
+<source src="/vids/ctc.mp4" type="video/mp4"/>
+</video>
+    <a class="ctc-footer-signature" href="https://uk.linkedin.com/in/kadeem-" target="_blank" rel="me noopener">Built by Kadeem</a>
+<div class="ctc-new-footer-fade"></div>
+</div>
+<!-- ✅ REPLACE your current SIDEBAR CSS block with this (only these classes) -->
+<style>
+
+/* tighten spacing so button sits close, no big dead gap */
+.sidebar-img-wrap{ margin-bottom: 12px; }
+.sidebar-title{ margin: 0 0 6px; }
+.sidebar-desc{ margin-bottom: 12px; }
+</style>
+<script>
+(function () {
+  const split = document.getElementById("aboutSplit");
+  const aside = document.getElementById("aboutSidebar");
+  const card  = document.getElementById("sidebarCard");
+  const mq    = window.matchMedia("(min-width: 901px)");
+  if (!split || !aside || !card) return;
+
+  const TOP = 120;
+
+  function reset() {
+    card.style.position = "";
+    card.style.top = "";
+    card.style.left = "";
+    card.style.width = "";
+    card.style.bottom = "";
+    card.style.transform = "";
+  }
+
+  function run() {
+    if (!mq.matches) { reset(); return; }
+
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+
+    const splitRect = split.getBoundingClientRect();
+    const splitTop = scrollY + splitRect.top;
+    const splitBottom = splitTop + split.offsetHeight;
+
+    const asideRect = aside.getBoundingClientRect();
+    const left = asideRect.left;
+
+    const cardH = card.offsetHeight;
+    const cardW = asideRect.width;
+
+    const fixedTopY = scrollY + TOP;
+
+    // Before split starts: normal flow
+    if (fixedTopY <= splitTop) { reset(); return; }
+
+    // When card would go past bottom of split: lock to bottom of split
+    if (fixedTopY + cardH >= splitBottom) {
+      card.style.position = "absolute";
+      card.style.top = (split.offsetHeight - cardH) + "px";
+      card.style.left = "0";
+      card.style.width = "100%";
+      return;
+    }
+
+    // Stick while scrolling inside split
+    card.style.position = "fixed";
+    card.style.top = TOP + "px";
+    card.style.left = left + "px";
+    card.style.width = cardW + "px";
+  }
+
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { run(); ticking = false; });
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", run);
+  if (mq.addEventListener) mq.addEventListener("change", run); else mq.addListener(run);
+
+  run();
+})();
+</script>
+<script>
+(function(){
+  try{
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+      // Respect reduced motion by skipping GSAP-driven effects if any scripts rely on it
+    }
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-data: reduce)").matches){
+      const v = document.querySelector(".ctc-new-footer-video");
+      if (v){ v.pause(); v.removeAttribute("autoplay"); }
+    }
+    if ("serviceWorker" in navigator && location.protocol === "https:"){
+      navigator.serviceWorker.register("/sw.js").catch(function(){});
+    }
+  }catch(e){}
+})();
+</script>
+<script data-sw="ctc">if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{});});}</script><script id="footer-email-copy">
+(() => {
+  const btn = document.querySelector('[data-copy-email-btn]') || document.querySelector('.footer-copy-btn');
+  if (!btn) return;
+
+  const email = btn.getAttribute('data-copy') || '';
+  const defaultLabel = btn.getAttribute('data-default-label') || btn.textContent || 'Copy';
+  const copiedLabel = btn.getAttribute('data-copied-label') || 'Copied';
+  let t;
+
+  const write = async (value) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+    const ta = document.createElement('textarea');
+    ta.value = value;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'absolute';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  };
+
+  btn.addEventListener('click', async () => {
+    clearTimeout(t);
+    try {
+      await write(email);
+      btn.textContent = copiedLabel;
+      btn.setAttribute('aria-label', copiedLabel);
+      t = setTimeout(() => {
+        btn.textContent = defaultLabel;
+        btn.setAttribute('aria-label', defaultLabel);
+      }, 1400);
+    } catch (_) {
+      btn.textContent = defaultLabel;
+      btn.setAttribute('aria-label', defaultLabel);
+    }
+  });
+})();
+</script>
+</body>
+</html>

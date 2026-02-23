@@ -1,0 +1,315 @@
+:root {
+  --ctc-font: "Ppgatwick", sans-serif;
+  --ctc-hdr-bg: rgba(0, 0, 0, 0.78);
+  --ctc-hdr-border: rgba(255, 255, 255, 0.10);
+  --ctc-hdr-text: rgba(255, 255, 255, 0.92);
+  --ctc-hdr-muted: rgba(255, 255, 255, 0.62);
+  --ctc-tap: 44px;
+  --ctc-pad-x: 14px;
+  --ctc-gap: 10px;
+  --ctc-radius: 14px;
+  --ctc-pill: 999px;
+  --ctc-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+  .ctc-hdr, .ctc-mnav { transition: none !important; }
+}
+
+/* Header shell */
+.ctc-hdr {
+  font-family: var(--ctc-font);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1100;
+  background: var(--ctc-hdr-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--ctc-hdr-border);
+  
+  /* Initial State */
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+
+  /* FIX: Use a slightly longer duration (600ms) and an Out-Quint ease.
+     This makes the "start" fast and the "finish" very soft.
+  */
+  transition: 
+    transform 600ms cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  
+  will-change: transform, opacity;
+}
+
+/* GLIDE STATES
+   We use 'is-visible' and 'is-hidden' to match the JS logic.
+*/
+
+/* Visible: Glides down into view */
+.ctc-hdr.is-visible {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Hidden: Glides up/recedes off screen */
+.ctc-hdr.is-hidden {
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* --- THE REST OF YOUR STYLES UNCHANGED --- */
+
+.ctc-hdr__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ctc-gap);
+  padding: calc(10px + env(safe-area-inset-top)) var(--ctc-pad-x) 10px;
+  min-height: calc(56px + env(safe-area-inset-top));
+}
+
+.ctc-hdr__left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.ctc-hdr__logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--ctc-tap);
+  padding: 0 12px;
+  border-radius: var(--ctc-pill);
+  text-decoration: none;
+  color: var(--ctc-hdr-text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+}
+
+.ctc-hdr__logo:hover { opacity: 0.9; }
+
+.ctc-hdr__crumbs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.ctc-hdr__crumb {
+  text-decoration: none;
+  color: var(--ctc-hdr-muted);
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ctc-hdr__crumb:hover { color: var(--ctc-hdr-text); }
+
+.ctc-hdr__crumbSep {
+  color: rgba(255, 255, 255, 0.28);
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+.ctc-hdr__crumb--current {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.ctc-hdr__nav {
+  display: none;
+  align-items: center;
+  gap: 26px;
+  flex: 0 0 auto;
+}
+
+.ctc-hdr__link {
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+
+.ctc-hdr__link:hover { color: #fff; }
+
+.ctc-hdr__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 14px;
+  border-radius: var(--ctc-pill);
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  transition: transform 140ms var(--ctc-ease), background 140ms var(--ctc-ease), border-color 140ms var(--ctc-ease);
+}
+
+.ctc-hdr__cta:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translate3d(0, -1px, 0);
+}
+
+.ctc-hdr__toggle {
+  width: var(--ctc-tap);
+  height: var(--ctc-tap);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.05);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
+.ctc-hdr__toggle:hover { background: rgba(255, 255, 255, 0.07); }
+
+.ctc-hdr__burger {
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  display: block;
+}
+
+.ctc-hdr__burger::before,
+.ctc-hdr__burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.ctc-hdr__burger::before { top: -6px; }
+.ctc-hdr__burger::after { top: 6px; }
+
+.ctc-mnav {
+  position: fixed;
+  top: calc(56px + env(safe-area-inset-top));
+  left: 0;
+  width: 100%;
+  z-index: 1090;
+  padding: 10px var(--ctc-pad-x) calc(14px + env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  display: grid;
+  gap: 10px;
+  opacity: 0;
+  transform: translate3d(0, -10px, 0);
+  pointer-events: none;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+html.ctc-mnav-open .ctc-mnav {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+}
+
+.ctc-mnav__link,
+.ctc-mnav__cta {
+  min-height: var(--ctc-tap);
+  padding: 0 14px;
+  border-radius: var(--ctc-radius);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.ctc-mnav__cta {
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+@media (min-width: 900px) {
+  :root { --ctc-pad-x: 48px; }
+  .ctc-hdr__inner {
+    padding: 0 var(--ctc-pad-x);
+    height: 90px;
+    min-height: 90px;
+  }
+
+
+
+  .ctc-hdr__nav { display: inline-flex; }
+  .ctc-hdr__toggle { display: none; }
+  .ctc-mnav { display: none !important; }
+}
+
+@media (max-width: 899px) {
+  .ctc-hdr__crumbs { display: none; }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Add this to header.smooth.css if not already there */
+
+#ctcHeader {
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); /* Smooth ease */
+  will-change: transform;
+}
+
+/* State: User scrolled UP (Show Header) */
+#ctcHeader.nav-up {
+  transform: translateY(0);
+}
+
+/* State: User scrolled DOWN (Hide Header) */
+#ctcHeader.nav-down {
+  transform: translateY(-100%);
+}
+
+
+/* Dock replaces top header on tablet + mobile */
+@media (max-width: 900px){
+  .ctc-hdr{ display:none !important; }
+}
+

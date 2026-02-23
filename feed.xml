@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Caribbean Tech Collective</title>
+    <link>https://caribbeantechcollective.com/</link>
+    <description>Updates from Caribbean Tech Collective</description>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 19 Feb 2026 00:00:00 GMT</lastBuildDate>
+
+    <item>
+      <title>Website structure and routing update</title>
+      <link>https://caribbeantechcollective.com/events/</link>
+      <guid isPermaLink="true">https://caribbeantechcollective.com/events/</guid>
+      <pubDate>Thu, 19 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Canonical routing, sitemap, feeds, and platform headers updated to match the current multi-page site.</description>
+    </item>
+  </channel>
+</rss>

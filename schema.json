@@ -1,0 +1,171 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://caribbeantechcollective.com/#org",
+      "name": "Caribbean Tech Collective",
+      "url": "https://caribbeantechcollective.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://caribbeantechcollective.com/icons/Logo.png",
+        "width": 512,
+        "height": 512
+      },
+      "email": "team@caribbeantechcollective.com",
+      "sameAs": [
+        "https://www.linkedin.com/company/caribbean-tech-collective/",
+        "https://www.instagram.com/caribbeantechcollective/",
+        "https://www.tiktok.com/@caribbeantechcollective"
+      ],
+      "founder": [
+        {
+          "@id": "https://caribbeantechcollective.com/team/kadeem-campbell/#person"
+        },
+        {
+          "@id": "https://caribbeantechcollective.com/team/jenai-edwards/#person"
+        },
+        {
+          "@id": "https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person"
+        }
+      ],
+      "description": "A UK-based community connecting Caribbean and Black professionals in technology through events, partnerships, and career opportunities.",
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "United Kingdom"
+        }
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "general inquiries",
+          "email": "team@caribbeantechcollective.com",
+          "availableLanguage": [
+            "en"
+          ]
+        }
+      ],
+      "keywords": [
+        "Caribbean tech",
+        "Black professionals in tech",
+        "UK tech community",
+        "tech events",
+        "networking",
+        "London"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://caribbeantechcollective.com/#website",
+      "url": "https://caribbeantechcollective.com/",
+      "name": "Caribbean Tech Collective",
+      "publisher": {
+        "@id": "https://caribbeantechcollective.com/#org"
+      },
+      "inLanguage": "en-GB",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://caribbeantechcollective.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": "Official website of Caribbean Tech Collective."
+    },
+    {
+      "@type": "Person",
+      "@id": "https://caribbeantechcollective.com/team/kadeem-campbell/#person",
+      "name": "Kadeem Campbell",
+      "url": "https://caribbeantechcollective.com/team/kadeem-campbell/",
+      "image": "https://caribbeantechcollective.com/cards/kadeem-campbell.webp",
+      "jobTitle": [
+        "Co-founder",
+        "Head of Platform"
+      ],
+      "worksFor": {
+        "@id": "https://caribbeantechcollective.com/#org"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/kadeem-/"
+      ],
+      "knowsAbout": [
+        "Caribbean tech community in the UK",
+        "Black professionals in technology",
+        "Product and operations leadership",
+        "Tech events and panel moderation",
+        "Community building",
+        "Go-to-market strategy"
+      ],
+      "homeLocation": {
+        "@type": "Place",
+        "name": "London, United Kingdom"
+      },
+      "description": "Co-founder and Head of Platform at Caribbean Tech Collective. London-based operator and community builder focused on Caribbean and Black professionals in technology.",
+      "mainEntityOfPage": "https://caribbeantechcollective.com/team/kadeem-campbell/",
+      "alternateName": [
+        "Kadeem",
+        "Kadeem Campbell (Caribbean Tech Collective)"
+      ],
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "companies-house-officer",
+          "value": "https://find-and-update.company-information.service.gov.uk/officers/YyHpGmacqKeKbAp_phZPfChAz2A/appointments"
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "CreativeWork",
+          "url": "https://peopleofcolorintech.com/articles/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "People of Color in Tech"
+          }
+        },
+        {
+          "@type": "NewsArticle",
+          "url": "https://www.voice-online.co.uk/news/community/2025/07/01/caribbean-tech-collective-launches-to-connect-british-caribbean-professionals-in-technology/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "The Voice"
+          }
+        },
+        {
+          "@type": "SocialMediaPosting",
+          "url": "https://www.linkedin.com/posts/kadeem-_caribbean-tech-collective-activity-7313194278267027457-t6VO",
+          "publisher": {
+            "@type": "Organization",
+            "name": "LinkedIn"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://caribbeantechcollective.com/team/jenai-edwards/#person",
+      "name": "Jenai Edwards",
+      "url": "https://caribbeantechcollective.com/team/jenai-edwards/",
+      "image": "https://caribbeantechcollective.com/img/jenai.webp",
+      "jobTitle": [
+        "Co-founder",
+        "Head of Brand"
+      ],
+      "worksFor": {
+        "@id": "https://caribbeantechcollective.com/#org"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person",
+      "name": "Rhianna Kyeremateng",
+      "url": "https://caribbeantechcollective.com/team/rihanna-kyeremateng/",
+      "image": "https://caribbeantechcollective.com/img/rhianna.webp",
+      "jobTitle": [
+        "Co-founder",
+        "Head of Community"
+      ],
+      "worksFor": {
+        "@id": "https://caribbeantechcollective.com/#org"
+      }
+    }
+  ]
+}

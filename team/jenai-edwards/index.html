@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<title>Jenai Edwards | Founder Profile</title>
+<meta content="Profile of Jenai Edwards, Founder of the Caribbean Tech Collective." name="description"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" name="viewport"/>
+<meta name="description" content="Meet the team behind Caribbean Tech Collective, building community and events for Caribbean professionals in tech across the UK.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+/* --- FONTS --- */
+@font-face {
+  font-family: Ppgatwick;
+  src: url(https://cdn.prod.website-files.com/685a8185af94af38590f5c06/689c8e2a0b6d13455b2ed8b6_PPGatwick-JumboExtralight.woff2) format("woff2");
+  font-weight: 200; font-display: swap;
+}
+@font-face {
+  font-family: Ppgatwick;
+  src: url(https://cdn.prod.website-files.com/685a8185af94af38590f5c06/685a86efe87d6fa227069273_SourceSans3-SemiBold.woff2) format("woff2");
+  font-weight: 700; font-display: swap;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("Graphik-Regular-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --accent-gray: #f4f4f4;
+  --border: #e5e5e5;
+}
+
+html { background-color: #ffffff; }
+
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: "Ppgatwick", sans-serif !important; 
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+
+/* STRICT FONT ENFORCEMENT */
+h1, h2, h3, .nav-link, .header-join-btn, .breadcrumb-link, .logo-short { font-family: "Ppgatwick", sans-serif !important; }
+p, .meta-label, .company { font-family: "Graphik", sans-serif !important; }
+
+/* --- 1. SMART HEADER (UPDATED) --- */
+.drive-header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  height: 90px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  box-sizing: border-box;
+  /* Dark Glass Style on White Page */
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.drive-header.nav-up { transform: translateY(0); }
+.drive-header.nav-down { transform: translateY(-100%); }
+
+.header-left { display: flex; align-items: center; gap: 16px; }
+
+.logo-short {
+  font-weight: 800; font-size: 28px; color: #fff; text-decoration: none; letter-spacing: -0.02em;
+}
+
+.breadcrumb-divider {
+  color: rgba(255,255,255,0.3); font-family: "Ppgatwick", sans-serif; font-size: 20px; font-weight: 300;
+}
+
+.breadcrumb-link {
+  font-size: 16px; color: rgba(255,255,255,0.6); letter-spacing: 0.02em; 
+  text-transform: uppercase; text-decoration: none; transition: color 0.2s;
+  margin-top: 4px;
+}
+.breadcrumb-link:hover { color: #fff; }
+
+.breadcrumb-current {
+  font-family: "Ppgatwick", sans-serif; font-size: 16px; color: #fff;
+  letter-spacing: 0.02em; text-transform: uppercase; margin-top: 4px;
+}
+
+.header-right {
+  margin-left: auto; display: flex; align-items: center; gap: 32px;
+}
+
+.nav-link {
+  font-size: 15px; color: rgba(255,255,255,0.8); text-decoration: none; 
+  font-weight: 600; transition: color 0.2s; letter-spacing: 0.02em;
+}
+.nav-link:hover { color: #fff; }
+
+.header-join-btn {
+  font-size: 14px; color: #000; background: #fff; text-decoration: none;
+  font-weight: 700; padding: 12px 28px; border-radius: 100px;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.header-join-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4); 
+  background-color: #ffffff;
+}
+
+/* --- HERO WRAPPER (UNCHANGED) --- */
+.hero-wrapper {
+  position: relative; width: 100%; height: 50vh; min-height: 400px;
+  overflow: hidden; padding-top: 80px; margin-bottom: 0;
+  background: #000; 
+}
+.hero-img {
+  position: absolute; top: 0; left: 0; width: 100%; height: 120%; 
+  object-fit: cover; opacity: 0.6; will-change: transform;
+}
+.hero-overlay {
+  position: absolute; inset: 0; display: flex; align-items: flex-end; padding: 60px 40px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #ffffff 100%);
+}
+
+/* --- PROFILE CONTAINER --- */
+.profile-container {
+  max-width: 1200px; margin: -100px auto 0; 
+  padding: 0 40px 120px; position: relative; z-index: 10;
+}
+
+.profile-header {
+  display: grid; grid-template-columns: 300px 1fr; gap: 80px;
+  align-items: end; margin-bottom: 80px;
+}
+
+/* Photo Card */
+.player-card-img {
+  width: 100%; aspect-ratio: 3/4; background: #fff;
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  position: relative;
+  border: 4px solid #fff;
+}
+.player-photo { width: 100%; height: 100%; object-fit: cover; }
+.player-number {
+  position: absolute; top: -40px; right: -20px;
+  font-size: 120px; font-weight: 700; color: #fff;
+  opacity: 0.1; line-height: 1; pointer-events: none;
+}
+
+/* Info Block */
+.player-info { color: #000; padding-bottom: 10px; }
+
+.player-name {
+  font-size: clamp(52px, 7vw, 100px); line-height: 0.9; font-weight: 700; margin: 0 0 40px;
+  color: #000; text-transform: uppercase; letter-spacing: -0.04em;
+}
+
+.player-meta {
+  display: flex; gap: 60px; border-bottom: 1px solid #eee; padding-bottom: 40px; margin-bottom: 40px;
+}
+
+.meta-item { display: flex; flex-direction: column; gap: 12px; }
+
+.meta-label { 
+  font-size: 11px; text-transform: uppercase; color: #999; 
+  letter-spacing: 0.15em; font-weight: 700; 
+}
+
+.meta-value { 
+  font-size: 28px; color: #000; 
+  font-weight: 700; display: flex; align-items: center; gap: 12px; 
+  letter-spacing: -0.02em; line-height: 1;
+}
+
+/* FLAGS */
+.flags-wrapper { display: flex; gap: 20px; align-items: center; }
+.flag-icon { 
+  width: 50px; height: auto; border-radius: 4px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); display: block; border: 1px solid #f0f0f0;
+}
+
+/* --- STATS & SKILLS GRID --- */
+.stats-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  margin-top: 60px;
+}
+
+.story-col h2 { 
+  font-size: 32px; font-weight: 700; margin: 0 0 24px; 
+  text-transform: uppercase; color: #000; letter-spacing: -0.03em;
+}
+.story-text p { 
+  font-size: 20px; line-height: 1.5; color: #000; margin-bottom: 24px; font-weight: 400; 
+  letter-spacing: -0.01em;
+}
+
+.skills-box { background: var(--accent-gray); padding: 40px; border-radius: 12px; }
+.skills-title { 
+  font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: #555;
+  font-weight: 700; margin: 0 0 24px; border-bottom: 1px solid #ddd; padding-bottom: 15px; 
+}
+.skills-list { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag {
+  background: #fff; border: 1px solid #ddd; padding: 12px 20px;
+  border-radius: 6px; font-size: 14px; font-weight: 700; text-transform: uppercase; color: #000;
+  display: inline-block; letter-spacing: 0.02em;
+}
+
+/* --- CAREER HISTORY --- */
+.history-section { margin-top: 80px; border-top: 1px solid #000; padding-top: 60px; }
+.history-header { 
+  font-size: 42px; font-weight: 700; margin-bottom: 40px; 
+  text-transform: uppercase; color:#000; letter-spacing: -0.03em;
+}
+
+.history-list { display: flex; flex-direction: column; }
+
+.history-item {
+  display: grid; grid-template-columns: 100px 1fr 1fr; 
+  padding: 30px 0; border-bottom: 1px solid var(--border);
+  align-items: center; position: relative;
+  transition: padding-left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0; transform: translateY(20px);
+}
+
+.history-item::after {
+  content: ""; position: absolute; bottom: 0; left: 0;
+  width: 0%; height: 1px; background: #000;
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.history-item:hover { padding-left: 20px; }
+.history-item:hover::after { width: 100%; }
+
+.year { font-size: 16px; color: #888; font-weight: 700; transition: color 0.3s; }
+.history-item:hover .year { color: #000; }
+
+.role { font-size: 22px; font-weight: 700; color: #000; letter-spacing: -0.02em; } 
+.company { font-size: 16px; color: #555; text-transform: uppercase; letter-spacing: 0.05em; text-align: right; font-weight: 400; }
+
+/* --- REFERENCES & CONTACT --- */
+.bottom-zone { margin-top: 100px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+
+.ref-col h3 { font-size: 24px; font-weight: 700; margin-bottom: 24px; color:#000; letter-spacing: -0.02em; }
+.ref-list { display: flex; flex-direction: column; gap: 16px; }
+.ref-link {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 24px; background: #fff; border: 1px solid #000; border-radius: 8px;
+  text-decoration: none; color: #000; font-weight: 700; font-size: 18px;
+  transition: transform 0.2s, background 0.2s; letter-spacing: -0.01em;
+}
+.ref-link:hover { transform: translateY(-4px); background: #f9f9f9; }
+.ref-icon { width: 18px; height: 18px; }
+
+.contact-card {
+  background: #000; color: #fff; padding: 60px; border-radius: 12px; 
+  text-align: center;
+}
+.contact-title { font-size: 32px; margin: 0 0 16px; font-weight: 700; letter-spacing: -0.03em; }
+.contact-text { font-size: 16px; opacity: 0.8; margin-bottom: 30px; letter-spacing: 0.01em; font-family: "Graphik", sans-serif !important; }
+.contact-btn-group { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.contact-btn {
+  background: #fff; color: #000; padding: 16px 32px; border-radius: 100px;
+  text-decoration: none; font-weight: 700; text-transform: uppercase; font-size: 13px;
+  display: inline-block; transition: transform 0.2s; letter-spacing: 0.05em;
+}
+.contact-btn.linkedin { background: #0077b5; color: #fff; }
+.contact-btn:hover { transform: scale(1.05); }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .drive-header { padding: 0 20px; height: 70px; }
+  .header-right { display: none; }
+  
+  .profile-header { grid-template-columns: 1fr; gap: 40px; margin-top: -100px; }
+  .player-card-img { width: 220px; margin: 0 auto; border: 4px solid #fff; }
+  .player-info { text-align: center; margin-top: 20px; }
+  .player-name { font-size: 48px; margin-bottom: 30px; } 
+  .player-meta { justify-content: center; border-color: #eee; flex-wrap: wrap; gap: 30px; }
+  .meta-value { font-size: 24px; }
+  
+  .stats-grid { grid-template-columns: 1fr; gap: 40px; }
+  .bottom-zone { grid-template-columns: 1fr; gap: 40px; }
+  .history-item { grid-template-columns: 60px 1fr; gap: 10px; }
+  .role { font-size: 18px; }
+  .company { text-align: left; grid-column: 2; font-size: 14px; color: #666; margin-top: 4px; }
+  
+  .hero-wrapper { height: 40vh; }
+  .hero-overlay { display: none; }
+}
+
+
+.app-dock, .app-dock *{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+
+</style>
+<link href="/header.smooth.css" rel="stylesheet"/>
+<link href="/footer.css" rel="stylesheet"/>
+<link href="/dock.fixed.css" rel="stylesheet"/>
+<script defer="" src="/header.smooth.js"></script>
+<meta content="Caribbean tech, Caribbean professionals, Caribbean networking, Caribbean community, Black professionals in tech, Black in tech networking, Black networking London, Caribbean diaspora in tech, Caribbean founders, Caribbean engineers, Caribbean product managers, Caribbean data science, Caribbean AI, Third space community, Professional networking London, Caribbean professionals in UK tech, Senior professionals in tech" name="keywords"/><meta content="Profile of Jenai Edwards, Founder of the Caribbean Tech Collective." name="ai-summary"/><meta content="Caribbean tech, Caribbean professionals, Caribbean networking, Caribbean community, Black professionals in tech, Black in tech networking, Black networking London, Caribbean diaspora in tech, Caribbean founders, Caribbean engineers, Caribbean product managers, Caribbean data science, Caribbean AI, Third space community, Professional networking London, Caribbean professionals in UK tech, Senior professionals in tech" name="ai-keywords"/><meta content="Caribbean tech community, professional networking, diaspora, product, data, engineering" name="ai-topic"/><meta content="vector-db-ready" name="embedding-hint"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link href="/manifest.webmanifest" rel="manifest"/><meta content="#0B3D2E" name="theme-color"/><link href="/icons/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/icons/apple-touch-icon.png" rel="apple-touch-icon"/><meta content="aec27df386cd965dd3f0676e8d26bd9f5525b344a37f5d9d864999a6897a8428" name="content-signature"/><meta content="verified-source" name="content-tier"/><meta content="2026-02-09T00:00:00Z" name="last-modified"/><style data-a11y="reduced-motion">@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important;}}</style><link rel="canonical" href="https://caribbeantechcollective.com/team/jenai-edwards/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caribbean Tech Collective">
+<meta property="og:title" content="Jenai Edwards | Founder Profile">
+<meta property="og:description" content="Meet the team behind Caribbean Tech Collective, building community and events for Caribbean professionals in tech across the UK.">
+<meta property="og:url" content="https://caribbeantechcollective.com/team/jenai-edwards/">
+<meta property="og:image" content="https://caribbeantechcollective.com/cards/ctc-team.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jenai Edwards | Founder Profile">
+<meta name="twitter:description" content="Meet the team behind Caribbean Tech Collective, building community and events for Caribbean professionals in tech across the UK.">
+<meta name="twitter:image" content="https://caribbeantechcollective.com/cards/ctc-team.webp">
+<link rel="me" href="https://www.linkedin.com/company/caribbean-tech-collective/">
+<link rel="me" href="https://www.instagram.com/caribbeantechcollective/">
+<link rel="me" href="https://www.tiktok.com/@caribbeantechcollective">
+<link rel="me" href="https://www.linkedin.com/in/kadeem-/">
+<link rel="me" href="https://find-and-update.company-information.service.gov.uk/company/16454317">
+<link rel="me" href="https://www.pocit.co.uk/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/">
+<link rel="me" href="https://www.voice-online.co.uk/">
+
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://caribbeantechcollective.com/#org","name":"Caribbean Tech Collective","url":"https://caribbeantechcollective.com/","logo":{"@type":"ImageObject","url":"https://caribbeantechcollective.com/icons/Logo.png","width":512,"height":512},"email":"team@caribbeantechcollective.com","sameAs":["https://www.linkedin.com/company/caribbean-tech-collective/","https://www.instagram.com/caribbeantechcollective/","https://www.tiktok.com/@caribbeantechcollective"],"founder":[{"@id":"https://caribbeantechcollective.com/team/kadeem-campbell/#person"},{"@id":"https://caribbeantechcollective.com/team/jenai-edwards/#person"},{"@id":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person"}]},{"@type":"WebSite","@id":"https://caribbeantechcollective.com/#website","url":"https://caribbeantechcollective.com/","name":"Caribbean Tech Collective","publisher":{"@id":"https://caribbeantechcollective.com/#org"},"inLanguage":"en-GB","potentialAction":{"@type":"SearchAction","target":"https://caribbeantechcollective.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/kadeem-campbell/#person","name":"Kadeem Campbell","url":"https://caribbeantechcollective.com/team/kadeem-campbell/","image":"https://caribbeantechcollective.com/cards/kadeem-campbell.webp","jobTitle":["Co-founder","Head of Platform"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"},"sameAs":["https://www.linkedin.com/in/kadeem-/","https://www.pocit.co.uk/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/","https://www.voice-online.co.uk/","https://find-and-update.company-information.service.gov.uk/company/16454317"],"knowsAbout":["Caribbean tech community in the UK","Black professionals in technology","Product and operations leadership","Tech events and panel moderation","Community building","Go-to-market strategy"],"homeLocation":{"@type":"Place","name":"London, United Kingdom"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/jenai-edwards/#person","name":"Jenai Edwards","url":"https://caribbeantechcollective.com/team/jenai-edwards/","image":"https://caribbeantechcollective.com/img/jenai.webp","jobTitle":["Co-founder","Head of Brand"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person","name":"Rhianna Kyeremateng","url":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/","image":"https://caribbeantechcollective.com/img/rhianna.webp","jobTitle":["Co-founder","Head of Community"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"WebPage","@id":"https://caribbeantechcollective.com/team/jenai-edwards/#webpage","url":"https://caribbeantechcollective.com/team/jenai-edwards/","name":"Jenai Edwards | Founder Profile","isPartOf":{"@id":"https://caribbeantechcollective.com/#website"},"about":[{"@id":"https://caribbeantechcollective.com/#org"}],"inLanguage":"en-GB","description":"Meet the team behind Caribbean Tech Collective, building community and events for Caribbean professionals in tech across the UK.","primaryImageOfPage":{"@type":"ImageObject","url":"https://caribbeantechcollective.com/cards/ctc-team.webp"}},{"@type":"BreadcrumbList","@id":"https://caribbeantechcollective.com/team/jenai-edwards/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://caribbeantechcollective.com/"},{"@type":"ListItem","position":2,"name":"Team","item":"https://caribbeantechcollective.com/team/"},{"@type":"ListItem","position":3,"name":"Jenai Edwards","item":"https://caribbeantechcollective.com/team/jenai-edwards/"}]}]}</script>
+
+</head>
+<body class="ctc-pad ctc-page"><a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<!-- Header -->
+<header class="ctc-hdr" id="ctcHeader" role="banner">
+<div class="ctc-hdr__inner" id="main">
+<div class="ctc-hdr__left">
+<a aria-label="Caribbean Tech Collective home" class="ctc-hdr__logo" href="/">
+        CTC
+      </a>
+<nav aria-label="Breadcrumb" class="ctc-hdr__crumbs">
+<a class="ctc-hdr__crumb" href="/team/">Team</a>
+<span aria-hidden="true" class="ctc-hdr__crumbSep">/</span>
+<a aria-current="page" class="ctc-hdr__crumb ctc-hdr__crumb--current">Jenai Edwards</a>
+</nav>
+</div>
+<!-- Desktop nav -->
+<nav aria-label="Primary" class="ctc-hdr__nav">
+<a class="ctc-hdr__link" href="/events/">Events</a>
+<a class="ctc-hdr__link" href="/team/">About</a>
+<a class="ctc-hdr__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Member</a>
+</nav>
+<!-- Mobile toggle -->
+<button aria-controls="ctcMobileMenu" aria-expanded="false" aria-label="Open menu" class="ctc-hdr__toggle" id="ctcMobileToggle" type="button">
+<span aria-hidden="true" class="ctc-hdr__burger"></span>
+</button>
+</div>
+<!-- Mobile menu -->
+<nav aria-hidden="true" aria-label="Mobile menu" class="ctc-mnav" id="ctcMobileMenu">
+<a class="ctc-mnav__link" href="/events/">Events</a>
+<a class="ctc-mnav__link" href="/about/">About</a>
+<a class="ctc-mnav__link" href="/team/">Team</a>
+<a class="ctc-mnav__cta" href="/join/">Become a Member</a>
+</nav>
+</header>
+<nav class="app-dock">
+<a class="dock-item" href="/events/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"></path></svg>
+<span>Events</span>
+</a>
+<a class="dock-item" href="/team/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+<span>Founders</span>
+</a>
+<a class="dock-item dock-home" href="/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+</a>
+<a class="dock-item" href="/about/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+<span>About</span>
+</a>
+<a class="dock-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform" rel="noopener" target="_blank">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+<span>Join</span>
+</a>
+</nav>
+<section class="hero-wrapper">
+<img alt="Background" class="hero-img" decoding="async" loading="lazy" src="/cards/ctc-team.webp"/>
+<div class="hero-overlay"></div>
+</section>
+<div class="profile-container">
+<div class="profile-header">
+<div class="player-card-img reveal">
+<img alt="Jenai Edwards" class="player-photo" decoding="async" loading="lazy" src="/img/jenai.webp"/>
+<div class="player-number">01</div>
+</div>
+<div class="player-info">
+<h1 class="player-name">Jenai Edwards</h1>
+<div class="player-meta">
+<div class="meta-item">
+<span class="meta-label">Position</span>
+<span class="meta-value">Co-Founder</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">Role</span>
+<span class="meta-value">Director of Brand</span>
+</div>
+<div class="meta-item">
+<span class="meta-label">Background</span>
+<div class="flags-wrapper">
+<span class="meta-value" style="font-size: 20px;">Barbados, Jamaica,<br/>Saint Vincent and the Grenadines</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="stats-grid">
+<div class="story-col reveal">
+<h2>About</h2>
+<div class="story-text">
+<p>
+Product designer, visual storyteller, and design mentor: Jenai’s work spans over nine years across television, digital, and mobile platforms, with a career journey in motion, graphic and UX design. She developed her ability to translate complex ideas, data, and current events into compelling visual narratives at Sky News. </p>
+<p>Over time, she embraced the logical decision-making of UX and transitioned into tech to bring greater purpose to her career through intentional, data-driven design. Creating impact through her work rather than words, Jenai is a naturally reserved character driven by creativity and curiosity. At Caribbean Tech Collective, she shapes creative vision and strategy to help build a community that empowers a new generation of Caribbean talent in tech.</p>
+</div>
+</div>
+<div class="skills-box reveal">
+<div class="skills-title">Key Specialities</div>
+<div class="skills-list">
+<span class="skill-tag">Product Design</span>
+<span class="skill-tag">UX</span>
+</div>
+</div>
+</div>
+<!--
+  <div class="history-section reveal">
+    <div class="history-header">Career History</div>
+    <div class="history-list">
+      <div class="history-item reveal-item">
+        <span class="year">2025 —</span>
+        <span class="role">Tech Consultant</span>
+        <span class="company">Swam AI</span>
+      </div>
+      <div class="history-item reveal-item">
+        <span class="year">2024</span>
+        <span class="role">Head of UK / GM</span>
+        <span class="company">ResQ</span>
+      </div>
+      <div class="history-item reveal-item">
+        <span class="year">2020</span>
+        <span class="role">Operations Lead, EMEA<br>Global Onboarding Lead<br>Launcher, UK</span>
+        <span class="company">CloudKitchens</span>
+      </div>
+
+            <div class="history-item reveal-item">
+        <span class="year">2020</span>
+        <span class="role">Operations Associate<br>Launcher</span>
+        <span class="company">Ola</span>
+      </div>
+      <div class="history-item reveal-item">
+        <span class="year">2017</span>
+        <span class="role">SMB Lead, UK</span>
+        <span class="company">Uber Eats</span>
+      </div>
+
+       <div class="history-item reveal-item">
+        <span class="year">2014</span>
+        <span class="role">Web Developer</span>
+        <span class="company">Freelance</span>
+      </div>
+    </div>
+  </div>-->
+<div class="bottom-zone reveal">
+<div class="ref-col">
+<!--<h3>Links</h3>-->
+<div class="ref-list">
+<!--  <a href="https://swam.app" target="_blank" rel="noopener noreferrer" class="ref-link">
+          Building an itinerary platform for travellers
+          <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"></path></svg>
+        </a>
+        <a href="https://www.bbc.co.uk/programmes/p0gwtw74" target="_blank" rel="noopener noreferrer"  class="ref-link">
+          BBC Radio London Interview
+          <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"></path></svg>
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSed0ZYs7TvYJ40RM1cpp128WG6JfzVdTc2_--K7GPARZ5I8_g/viewform?usp=sharing&ouid=102715721866312635856" target="_blank" rel="noopener noreferrer"  class="ref-link">
+          Join my matchmaking sessions
+          <svg class="ref-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"></path></svg>
+        </a>-->
+</div>
+</div>
+<div class="contact-card">
+<h2 class="contact-title">Reach out</h2>
+<p class="contact-text">Available for advisory and speaking engagements</p>
+<div class="contact-btn-group">
+<a class="contact-btn" href="mailto:team@caribbeantechcollective.com">Email Jenai</a>
+<a class="contact-btn linkedin" href="https://www.linkedin.com/in/jenai-edwards-ux" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+</div>
+</div>
+</div>
+</div>
+<footer role="contentinfo">
+<div class="footer-ctc-footer-with-form">
+<div class="footer">
+<section class="footer-sc">
+<div class="full-container footer-s">
+<div class="container footer-s">
+<div class="footer-top">
+<div class="headline-h4">Contact Us</div>
+<div class="footer-email-row"><a class="footer-mail-2" href="mailto:team@caribbeantechcollective.com" aria-label="Email Caribbean Tech Collective">team@caribbeantechcollective.com</a><button class="footer-copy-btn" type="button" aria-label="Copy email address" data-copy="team@caribbeantechcollective.com">Copy</button></div>
+</div>
+<div class="ctc-vision-cursor"><p></p></div>
+<div class="footer-down">
+<div class="footer-info-block">
+<div class="footer-terms-links"></div>
+<div class="terms-link"></div>
+</div>
+<div aria-label="Social media links" class="footer-media-links" role="navigation">
+<a aria-label="Caribbean Tech Collective on TikTok" class="f-media-link w-inline-block" href="https://www.tiktok.com/@caribbeantechcollective?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="currentColor" height="100%" viewbox="0 0 22 23" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(4, -2.5) scale(0.62)">
+<path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path>
+</g>
+</svg>
+</div>
+</a>
+<a aria-label="Caribbean Tech Collective on Instagram" class="f-media-link w-inline-block" href="https://instagram.com/caribbeantechcollective?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 12C15 12.5933 14.8241 13.1734 14.4944 13.6667C14.1648 14.1601 13.6962 14.5446 13.1481 14.7716C12.5999 14.9987 11.9967 15.0581 11.4147 14.9424C10.8328 14.8266 10.2982 14.5409 9.87868 14.1213C9.45912 13.7018 9.1734 13.1672 9.05764 12.5853C8.94189 12.0033 9.0013 11.4001 9.22836 10.8519C9.45542 10.3038 9.83994 9.83524 10.3333 9.50559C10.8266 9.17595 11.4067 9 12 9C12.7949 9.00247 13.5565 9.31934 14.1186 9.88141C14.6807 10.4435 14.9975 11.2051 15 12ZM21.375 7.875V16.125C21.375 17.5174 20.8219 18.8527 19.8373 19.8373C18.8527 20.8219 17.5174 21.375 16.125 21.375H7.875C6.48261 21.375 5.14726 20.8219 4.16269 19.8373C3.17812 18.8527 2.625 17.5174 2.625 16.125V7.875C2.625 6.48261 3.17812 5.14726 4.16269 4.16269C5.14726 3.17812 6.48261 2.625 7.875 2.625H16.125C17.5174 2.625 18.8527 3.17812 19.8373 4.16269C20.8219 5.14726 21.375 6.48261 21.375 7.875ZM16.5 12C16.5 11.11 16.2361 10.24 15.7416 9.49993C15.2471 8.75991 14.5443 8.18314 13.7221 7.84254C12.8998 7.50195 11.995 7.41283 11.1221 7.58647C10.2492 7.7601 9.44736 8.18868 8.81802 8.81802C8.18868 9.44736 7.7601 10.2492 7.58647 11.1221C7.41283 11.995 7.50195 12.8998 7.84254 13.7221C8.18314 14.5443 8.75991 15.2471 9.49993 15.7416C10.24 16.2361 11.11 16.5 12 16.5C13.1935 16.5 14.3381 16.0259 15.182 15.182C16.0259 14.3381 16.5 13.1935 16.5 12ZM18 7.125C18 6.9025 17.934 6.68499 17.8104 6.49998C17.6868 6.31498 17.5111 6.17078 17.3055 6.08564C17.1 6.00049 16.8738 5.97821 16.6555 6.02162C16.4373 6.06502 16.2368 6.17217 16.0795 6.3295C15.9222 6.48684 15.815 6.68729 15.7716 6.90552C15.7282 7.12375 15.7505 7.34995 15.8356 7.55552C15.9208 7.76109 16.065 7.93679 16.25 8.0604C16.435 8.18402 16.6525 8.25 16.875 8.25C17.1734 8.25 17.4595 8.13147 17.6705 7.9205C17.8815 7.70952 18 7.42337 18 7.125Z" fill="currentColor"></path>
+</svg>
+</div>
+</a>
+<a aria-label="Caribbean Tech Collective on LinkedIn" class="f-media-link w-inline-block" href="https://www.linkedin.com/company/caribbean-tech-collective/?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1316_1677)">
+<path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="white"></path>
+</g>
+<defs>
+<clippath id="clip0_1316_1677">
+<rect fill="white" height="24" width="24"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</footer>
+<div class="ctc-footer-video-wrap">
+<video autoplay="" class="ctc-new-footer-video" loop="" muted="" playsinline="" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" preload="none">
+<source src="/vids/ctc.webm" type="video/webm"/>
+<source src="/vids/ctc.mp4" type="video/mp4"/>
+</video>
+    <a class="ctc-footer-signature" href="https://uk.linkedin.com/in/kadeem-" target="_blank" rel="me noopener">Built by Kadeem</a>
+<div class="ctc-new-footer-fade"></div>
+</div>
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// 1. SMART HEADER
+const header = document.getElementById("smartHeader");
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  if (scrollTop > lastScrollTop && scrollTop > 100) {
+    header.classList.remove("nav-up");
+    header.classList.add("nav-down");
+  } else {
+    header.classList.remove("nav-down");
+    header.classList.add("nav-up");
+  }
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+});
+
+// 2. HERO PARALLAX
+gsap.to(".hero-img", {
+  yPercent: 20, ease: "none",
+  scrollTrigger: { trigger: ".hero-wrapper", start: "top top", end: "bottom top", scrub: true }
+});
+
+// 3. REVEAL ANIMATIONS
+const reveals = document.querySelectorAll(".reveal");
+reveals.forEach(el => {
+  gsap.from(el, {
+    y: 40, opacity: 0, duration: 0.8, ease: "power3.out",
+    scrollTrigger: { trigger: el, start: "top 90%" }
+  });
+});
+
+const historyItems = document.querySelectorAll(".reveal-item");
+gsap.to(historyItems, {
+  y: 0, opacity: 1, duration: 0.5, stagger: 0.1, ease: "power2.out",
+  scrollTrigger: { trigger: ".history-list", start: "top 85%" }
+});
+
+// 4. COPY PILL
+const buttonCopy = document.querySelector('.click-to-copy');
+if (buttonCopy) {
+  const pill = document.createElement('div');
+  pill.className = 'copy-pill';
+  pill.textContent = 'Copy';
+  document.body.appendChild(pill);
+  buttonCopy.addEventListener('mouseenter', () => pill.style.opacity = '1');
+  buttonCopy.addEventListener('mousemove', (e) => { pill.style.left = `${e.clientX}px`; pill.style.top = `${e.clientY}px`; });
+  buttonCopy.addEventListener('mouseleave', () => pill.style.opacity = '0');
+  buttonCopy.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(buttonCopy.textContent.trim());
+    pill.textContent = 'Copied';
+    setTimeout(() => { pill.textContent = 'Copy'; }, 900);
+  });
+}
+</script>
+<script>
+(function () {
+  const btn = document.querySelector("#smartHeader .mobile-nav-toggle");
+  const nav = document.getElementById("mobileNav");
+  if (!btn || !nav) return;
+
+  const isOpen = () => document.documentElement.classList.contains("mobile-nav-open");
+
+  const setOpen = (open) => {
+    document.documentElement.classList.toggle("mobile-nav-open", open);
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+    nav.setAttribute("aria-hidden", open ? "false" : "true");
+  };
+
+  btn.addEventListener("click", () => setOpen(!isOpen()));
+  nav.addEventListener("click", (e) => {
+    const t = e.target;
+    if (t && t.tagName === "A") setOpen(false);
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!isOpen()) return;
+    const t = e.target;
+    if (!t) return;
+    if (t.closest && (t.closest("#smartHeader") || t.closest("#mobileNav"))) return;
+    setOpen(false);
+  });
+})();
+</script>
+<script data-sw="ctc">if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{});});}</script><script id="footer-email-copy">
+(() => {
+  const btn = document.querySelector('[data-copy-email-btn]') || document.querySelector('.footer-copy-btn');
+  if (!btn) return;
+
+  const email = btn.getAttribute('data-copy') || '';
+  const defaultLabel = btn.getAttribute('data-default-label') || btn.textContent || 'Copy';
+  const copiedLabel = btn.getAttribute('data-copied-label') || 'Copied';
+  let t;
+
+  const write = async (value) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+    const ta = document.createElement('textarea');
+    ta.value = value;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'absolute';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  };
+
+  btn.addEventListener('click', async () => {
+    clearTimeout(t);
+    try {
+      await write(email);
+      btn.textContent = copiedLabel;
+      btn.setAttribute('aria-label', copiedLabel);
+      t = setTimeout(() => {
+        btn.textContent = defaultLabel;
+        btn.setAttribute('aria-label', defaultLabel);
+      }, 1400);
+    } catch (_) {
+      btn.textContent = defaultLabel;
+      btn.setAttribute('aria-label', defaultLabel);
+    }
+  });
+})();
+</script>
+</body>
+</html>

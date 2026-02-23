@@ -1,0 +1,17 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Caribbean Tech Collective",
+  "home_page_url": "https://caribbeantechcollective.com/",
+  "feed_url": "https://caribbeantechcollective.com/feed.json",
+  "description": "Updates from Caribbean Tech Collective",
+  "language": "en-GB",
+  "items": [
+    {
+      "id": "https://caribbeantechcollective.com/events/",
+      "url": "https://caribbeantechcollective.com/events/",
+      "title": "Website structure and routing update",
+      "content_text": "Canonical routing, sitemap, feeds, and platform headers updated to match the current multi-page site.",
+      "date_published": "2026-02-19T00:00:00Z"
+    }
+  ]
+}

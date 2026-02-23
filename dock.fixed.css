@@ -1,0 +1,116 @@
+
+
+
+  /* === MOBILE APP DOCK (FIXED BOTTOM NAV) === */
+  @media (max-width: 900px) {
+    .app-dock {
+        position: fixed;
+        bottom: 24px;
+        left: 18px;
+        right: 18px;
+        height: 72px;
+        background: rgba(20, 20, 20, 0.85); /* Deep dark glass */
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(255,255,255,0.12);
+        border-radius: 24px;
+        z-index: 9999; /* Above almost everything */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 12px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+
+    .dock-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        font-size: 10px;
+        letter-spacing: 0.02em;
+        height: 100%;
+        transition: color 0.2s ease;
+    }
+
+    .dock-item.active { color: #fff; }
+    .dock-item:active { transform: scale(0.95); }
+
+    .dock-icon { width: 22px; height: 22px; fill: currentColor; }
+    .dock-item.active .dock-icon { fill: #fff; }
+
+    /* CENTER HOME BUTTON (Prominent) */
+    .dock-item.dock-home {
+        flex: 0 0 56px; 
+        height: 56px;
+        background: #fff;
+        border-radius: 18px;
+        margin: 0 6px;
+        color: #000;
+        box-shadow: 0 4px 15px rgba(255,255,255,0.15);
+    }
+    .dock-home .dock-icon { fill: #000; width: 26px; height: 26px; }
+  }
+
+  @media (min-width: 901px) {
+    .app-dock { display: none; }
+  }
+
+    /* TABLET DOCK NARROWER (when it first switches to dock) */
+    @media (min-width: 601px) and (max-width: 900px) {
+      .app-dock{
+        left: 50%;
+        right: auto;
+        width: 560px;
+        max-width: calc(100% - 36px);
+        transform: translateX(-50%);
+      }
+    }
+
+
+
+.footer-email-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.footer-copy-btn{appearance:none;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.08);color:#fff;border-radius:999px;padding:10px 14px;font:inherit;font-weight:600;line-height:1;cursor:pointer;transition:transform .08s ease,background .15s ease,border-color .15s ease}
+.footer-copy-btn:hover{background:rgba(255,255,255,0.14);border-color:rgba(255,255,255,0.35)}
+.footer-copy-btn:active{transform:translateY(1px)}
+.footer-copy-btn:focus-visible{outline:2px solid rgba(255,255,255,0.6);outline-offset:2px}
+.footer-madeby{margin-top:10px;font-size:13px;opacity:.78}
+.footer-copy-toast{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);background:rgba(10,10,10,0.92);color:#fff;border:1px solid rgba(255,255,255,0.18);border-radius:999px;padding:10px 14px;font-size:13px;opacity:0;pointer-events:none;transition:opacity .15s ease, transform .15s ease;z-index:9999}
+.footer-copy-toast.is-visible{opacity:1;transform:translateX(-50%) translateY(-6px)}
+/* Mobile: keep email readable and not oversized */
+@media (max-width: 520px){
+  .footer-mail-2{font-size:clamp(14px,4.2vw,16px)}
+  .footer-copy-btn{padding:9px 12px;font-size:13px}
+}
+
+
+.ctc-footer-video-wrap{position:relative;overflow:hidden;}
+.ctc-footer-signature{
+  position:absolute;
+  left:50%;
+  top:40%;
+  transform:translate(-50%,-50%);
+  z-index:3;
+  padding:0;
+  margin:0;
+  font-weight:600;
+  font-size:14px;
+  line-height:1;
+  letter-spacing:0.18em;
+  text-transform:lowercase;
+  color:rgba(255,255,255,0.14);
+  text-decoration:none;
+  mix-blend-mode:soft-light;
+  filter:blur(0.15px);
+  text-shadow:0 1px 3px rgba(0,0,0,0.18);
+}
+.ctc-footer-signature:hover{color:rgba(255,255,255,0.32);text-decoration:none;}
+.footer-team-email{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+@media (max-width:768px){
+  .ctc-footer-signature{font-size:12px;top:34%;letter-spacing:0.14em;}
+  .footer-email{font-size:clamp(13px,3.6vw,16px);}
+}

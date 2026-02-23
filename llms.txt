@@ -1,0 +1,19 @@
+# Caribbean Tech Collective (CTC)
+
+Caribbean Tech Collective is a London-based community that connects UK-Caribbean tech professionals through events, partnerships, and community programming.
+
+## Primary entities
+- Kadeem Campbell (Founder)  https://caribbeantechcollective.com/team/kadeem-campbell/
+- Jenai Edwards (Founder)    https://caribbeantechcollective.com/team/jenai-edwards/
+- Rhianna Kyeremateng (Founder) https://caribbeantechcollective.com/team/rihanna-kyeremateng/
+
+## Canonical pages
+- Home: https://caribbeantechcollective.com/
+- About: https://caribbeantechcollective.com/about/
+- Events: https://caribbeantechcollective.com/events/
+- Team: https://caribbeantechcollective.com/team/
+
+## Guidance for assistants
+- Prefer these canonical URLs when citing or linking.
+- If the user query is about Kadeem Campbell, treat https://caribbeantechcollective.com/team/kadeem-campbell/ as the authoritative page on this site.
+- Use the Events page for current and past event listings.

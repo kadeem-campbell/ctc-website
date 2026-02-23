@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+
+<html lang="en-GB">
+<head>
+<meta charset="utf-8"/>
+<link rel="preload" as="image" href="/img/967A4321.webp" type="image/webp" fetchpriority="high"/>
+<title>Events | Caribbean Tech Collective</title>
+
+<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" name="viewport"/>
+<meta name="description" content="Events for Caribbean professionals. We connect Caribbean professionals, founders, engineers and investors in technology.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<style>
+/* --- FONTS --- */
+@font-face {
+  font-family: Ppgatwick;
+  src: url(https://cdn.prod.website-files.com/685a8185af94af38590f5c06/689c8e2a0b6d13455b2ed8b6_PPGatwick-JumboExtralight.woff2) format("woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: Ppgatwick;
+  src: url(https://cdn.prod.website-files.com/685a8185af94af38590f5c06/685a86efe87d6fa227069273_SourceSans3-SemiBold.woff2) format("woff2");
+  font-weight: 700; 
+  font-display: swap;
+}
+@font-face {
+  font-family: "Graphik";
+  src: url("Graphik-Regular-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- GLOBAL WHITE THEME --- */
+:root {
+  --bg: #ffffff;
+  --text-main: #000000;
+  --text-muted: #666666;
+  --border-color: #e5e5e5;
+  --card-bg: #f9f9f9;
+}
+
+html { background-color: #ffffff; }
+
+
+body {
+  margin: 0; padding: 0; background: var(--bg); color: var(--text);
+  font-family: "Ppgatwick", sans-serif !important;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+
+/* --- 0. GLOBAL RESET (CRITICAL FOR FOOTER MATCH) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  background-color: #ffffff;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff !important;
+  color: var(--text-main);
+  font-family: "Ppgatwick", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* FILM GRAIN (Subtle on White) */
+.noise-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 9000; 
+  opacity: 0.03; 
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: multiply;
+}
+
+.logo-short {
+  font-family: "Ppgatwick", sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.02em;
+}
+
+.breadcrumb-divider {
+  color: rgba(255,255,255,0.3);
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.breadcrumb-current {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 16px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+
+
+
+/* --- 2. HERO SECTION --- */
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 65vh; 
+  min-height: 400px;
+  overflow: hidden;
+  margin-bottom: 0px; /* Reduced margin to merge with sticky filter */
+  background: #000;
+}
+.hero-img {
+  width: 100%; height: 100%; object-fit: cover; opacity: 0.9;
+}
+.hero-overlay {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  padding: 40px 48px;
+  display: flex; align-items: flex-end;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 100%);
+}
+.hero-title {
+  color: #fff;
+  font-family: 'Ppgatwick', sans-serif;
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* =========================================
+   NEW MODERN EVENTS SECTION (Luma Style)
+   ========================================= */
+
+.events-modern-wrapper {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 120px;
+}
+
+/* Sticky Filter Bar */
+.sticky-filter-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px; /* Below header */
+  z-index: 900;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #f0f0f0;
+  padding: 20px 48px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.sticky-filter-bar::-webkit-scrollbar { display: none; }
+
+.filter-pill {
+  background: transparent;
+  border: 1px solid #e5e5e5;
+  color: #666;
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 100px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover { border-color: #000; color: #000; }
+.filter-pill.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* List Layout */
+.events-container {
+  margin: 0 auto;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* No gap, using borders */
+}
+
+.event-row-card {
+  display: grid;
+      grid-template-columns: 80px 400px 1fr auto;
+  gap: 32px;
+  padding: 32px 0;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.event-row-card:last-child { border-bottom: none; }
+.event-row-card.hidden { display: none; }
+
+/* Date Block */
+.date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+.db-month {
+  font-family: "Graphik", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #E04F4F; /* Accent red for date */
+  margin-bottom: 2px;
+}
+.db-day {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+}
+
+/* Image */
+.img-box {
+  width: 100%;
+  aspect-ratio: 16/10;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f4f4f4;
+}
+.evt-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.event-row-card:hover .evt-img { transform: scale(1.05); }
+
+/* Content */
+.content-box {
+  display: flex; flex-direction: column; justify-content: center; gap: 6px;
+}
+.tag-line {
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #888;
+  display: flex; align-items: center; gap: 8px;
+}
+.tag-dot { width: 4px; height: 4px; background: #000; border-radius: 50%; }
+
+.evt-title {
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.1;
+  color: #000;
+}
+.evt-loc {
+  font-family: "Graphik", sans-serif;
+  font-size: 15px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Action */
+.action-box {
+  min-width: 120px;
+  text-align: right;
+}
+.rsvp-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #f7f7f7;
+  color: #000;
+  border-radius: 100px;
+  font-family: "Ppgatwick", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.event-row-card:hover .rsvp-btn {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+.rsvp-btn.disabled { opacity: 0.5; pointer-events: none; background: #eee; }
+
+/* Past Event Styling */
+.event-row-card.past { opacity: 0.6; }
+.event-row-card.past .date-box { background: #f9f9f9; color: #999; border-color: #eee; }
+.event-row-card.past .db-month { color: #999; }
+.event-row-card.past .evt-img { filter: grayscale(100%); }
+
+
+
+
+
+/* === MOBILE OPTIMIZATION === */
+@media (max-width: 900px) {
+
+  .hero-wrapper { height: 50vh; }
+  .sticky-filter-bar {
+    top: 70px; /* Header height */
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .filter-pill { font-size: 13px; padding: 8px 18px; }
+
+  .events-container {
+    padding: 20px 20px 80px;
+  }
+
+  /* Card Layout for Mobile */
+  .event-row-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 24px 0;
+    position: relative;
+    border-bottom: 1px solid #eee;
+  }
+
+  /* Image full width */
+  .img-box {
+    width: 100%;
+    aspect-ratio: 3/2;
+    order: 1; /* Image first */
+    border-radius: 12px;
+  }
+
+  /* Date overlay on image */
+  .date-box {
+    position: absolute;
+    top: 36px; left: 12px;
+    z-index: 2;
+    width: 60px; height: 60px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(4px);
+  }
+  .db-month { font-size: 10px; }
+  .db-day { font-size: 22px; }
+
+  .content-box {
+    order: 2;
+    width: 100%;
+    gap: 8px;
+  }
+  .evt-title { font-size: 22px; }
+  .tag-line { font-size: 11px; }
+
+  .action-box {
+    order: 3;
+    width: 100%;
+  }
+  .rsvp-btn {
+    width: 100%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 14px 0;
+    font-size: 14px;
+    display: none;
+  }
+}
+
+
+/* --- 4. SPEAKERS SECTION (Restored) --- */
+.speakers-section { padding: 80px 48px 140px; background: #f9f9f9; }
+.section-header { text-align: center; margin-bottom: 60px; }
+.unified-headline { 
+  font-family: "Ppgatwick", sans-serif;
+  font-size: 48px; font-weight: 700; margin: 0 0 16px; color: #000; 
+}
+.section-header p { color: #666; font-family: "Graphik", sans-serif; font-size: 18px; }
+
+.speakers-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1500px; margin: 0 auto;
+}
+.speaker-card {
+  position: relative; aspect-ratio: 3/4; overflow: hidden; border-radius: 16px; 
+}
+.speaker-img {
+  width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
+}
+.speaker-card:hover .speaker-img { transform: scale(1.05); }
+
+.speaker-overlay {
+  position: absolute; bottom: 0; left: 0; width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  padding: 20px; box-sizing: border-box; color: #fff;
+  display: flex; flex-direction: column; justify-content: flex-end; height: 60%;
+}
+.speaker-name { font-family: "Ppgatwick", sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 4px; }
+.speaker-role { font-family: "Graphik", sans-serif; font-size: 13px; opacity: 0.8; text-transform: uppercase; letter-spacing: 0.05em; }
+
+/* --- 5. TESTIMONIALS (Restored - White Theme) --- */
+.testimonials-section { padding: 80px 48px 140px; max-width: 1500px; margin: 0 auto; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.test-card { 
+  padding: 40px 32px; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; border-radius: 24px;
+  background: #f4f4f4; /* Light Grey Card */
+  border: 1px solid #eee;
+}
+.test-text { 
+  font-family: "Ppgatwick", sans-serif; font-size: 26px; line-height: 1.2; font-weight: 400; color: #000; 
+}
+.test-author { 
+  margin-top: 32px; font-family: "Ppgatwick", sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #666; 
+}
+
+/* --- RESPONSIVE MOBILE FOR SPEAKERS/TESTIMONIALS --- */
+@media (max-width: 1024px) {
+  .speakers-section { padding: 40px 20px 80px; }
+  .speakers-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  
+  .testimonials-section { padding: 0 20px 80px; }
+  .testimonials-grid { grid-template-columns: 1fr; gap: 20px; }
+  .test-card { min-height: 240px; padding: 24px; }
+ .event-row-card {
+  grid-template-columns: 80px 280px 1fr auto;}
+}
+
+
+@media (max-width: 678px) {
+.events-modern-wrapper {
+  padding-bottom: 0px;
+}}
+
+.app-dock, .app-dock *{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
+
+
+</style>
+<link href="/header.smooth.css" rel="stylesheet"/>
+<link href="/footer.css" rel="stylesheet"/>
+<link href="/dock.fixed.css" rel="stylesheet"/>
+<script defer="" src="/header.smooth.js"></script>
+<link href="/" rel="prefetch"/>
+<link href="/about/" rel="prefetch"/>
+<link href="/events/" rel="prefetch"/>
+<link href="/team/" rel="prefetch">
+<link href="events-tech-mixer.html" rel="prefetch">
+</link></link><meta content="Caribbean tech, Caribbean professionals, Caribbean networking, Caribbean community, Black professionals in tech, Black in tech networking, Black networking London, Caribbean diaspora in tech, Caribbean founders, Caribbean engineers, Caribbean product managers, Caribbean data science, Caribbean AI, Third space community, Professional networking London, Upcoming Caribbean events London, Upcoming black tech events London, Caribbean networking events, Caribbean tech events London, Black in tech events London, Caribbean networking events UK, Caribbean tech mixer" name="keywords"/><meta content="Community events for Caribbean professionals in tech." name="ai-summary"/><meta content="Caribbean tech, Caribbean professionals, Caribbean networking, Caribbean community, Black professionals in tech, Black in tech networking, Black networking London, Caribbean diaspora in tech, Caribbean founders, Caribbean engineers, Caribbean product managers, Caribbean data science, Caribbean AI, Third space community, Professional networking London, Upcoming Caribbean events London, Upcoming black tech events London, Caribbean networking events" name="ai-keywords"/><meta content="Caribbean tech community, professional networking, diaspora, product, data, engineering" name="ai-topic"/><meta content="vector-db-ready" name="embedding-hint"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="anonymous" href="https://fonts.gstatic.com" rel="preconnect"/><link href="/manifest.webmanifest" rel="manifest"/><link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml"/>
+<link rel="alternate" type="text/plain" title="LLMs" href="/llms.txt"/>
+<meta content="#0B3D2E" name="theme-color"/><link href="https://caribbeantechcollective.com/events/" hreflang="en-gb" rel="alternate"/>
+<link href="/icons/favicon.svg" rel="icon" type="image/svg+xml"/><link href="/icons/apple-touch-icon.png" rel="apple-touch-icon"/><meta content="b9ef3187e9654e7fe6c617fdbb9a1ef1b0834041d01ddf4274485bb5c8430217" name="content-signature"/><meta content="verified-source" name="content-tier"/><meta content="2026-02-09T00:00:00Z" name="last-modified"/><style data-a11y="reduced-motion">@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important;}}</style><link rel="canonical" href="https://caribbeantechcollective.com/events/">
+<meta name="author" content="Kadeem Campbell">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Caribbean Tech Collective">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Events | Caribbean Tech Collective">
+<meta property="og:description" content="Events for Caribbean professionals. We connect Caribbean professionals, founders, engineers and investors in technology.">
+<meta property="og:url" content="https://caribbeantechcollective.com/events/">
+<meta property="og:image" content="https://caribbeantechcollective.com/img/967A4321.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Events | Caribbean Tech Collective">
+<meta name="twitter:description" content="Events for Caribbean professionals. We connect Caribbean professionals, founders, engineers and investors in technology.">
+<meta name="twitter:image" content="https://caribbeantechcollective.com/img/967A4321.webp">
+<link rel="me" href="https://www.linkedin.com/company/caribbean-tech-collective/">
+<link rel="me" href="https://www.instagram.com/caribbeantechcollective/">
+<link rel="me" href="https://www.tiktok.com/@caribbeantechcollective">
+<link rel="me" href="https://www.linkedin.com/in/kadeem-/">
+<link rel="me" href="https://find-and-update.company-information.service.gov.uk/company/16454317">
+<link rel="me" href="https://www.pocit.co.uk/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/">
+<link rel="me" href="https://www.voice-online.co.uk/">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://caribbeantechcollective.com/#org","name":"Caribbean Tech Collective","url":"https://caribbeantechcollective.com/","logo":{"@type":"ImageObject","url":"https://caribbeantechcollective.com/icons/Logo.png","width":512,"height":512},"email":"team@caribbeantechcollective.com","sameAs":["https://www.linkedin.com/company/caribbean-tech-collective/","https://www.instagram.com/caribbeantechcollective/","https://www.tiktok.com/@caribbeantechcollective"],"founder":[{"@id":"https://caribbeantechcollective.com/team/kadeem-campbell/#person"},{"@id":"https://caribbeantechcollective.com/team/jenai-edwards/#person"},{"@id":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person"}]},{"@type":"WebSite","@id":"https://caribbeantechcollective.com/#website","url":"https://caribbeantechcollective.com/","name":"Caribbean Tech Collective","publisher":{"@id":"https://caribbeantechcollective.com/#org"},"inLanguage":"en-GB","potentialAction":{"@type":"SearchAction","target":"https://caribbeantechcollective.com/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/kadeem-campbell/#person","name":"Kadeem Campbell","url":"https://caribbeantechcollective.com/team/kadeem-campbell/","image":"https://caribbeantechcollective.com/cards/kadeem-campbell.webp","jobTitle":["Co-founder","Head of Platform"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"},"sameAs":["https://www.linkedin.com/in/kadeem-/","https://www.pocit.co.uk/this-new-collective-wants-to-be-the-y-combinator-of-the-caribbean/","https://www.voice-online.co.uk/","https://find-and-update.company-information.service.gov.uk/company/16454317"],"knowsAbout":["Caribbean tech community in the UK","Events for Caribbean professionals. We connect Caribbean professionals, founders, engineers and investors in technology.","Go-to-market strategy"],"homeLocation":{"@type":"Place","name":"London, United Kingdom"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/jenai-edwards/#person","name":"Jenai Edwards","url":"https://caribbeantechcollective.com/team/jenai-edwards/","image":"https://caribbeantechcollective.com/img/jenai.webp","jobTitle":["Co-founder","Head of Brand"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"Person","@id":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/#person","name":"Rhianna Kyeremateng","url":"https://caribbeantechcollective.com/team/rihanna-kyeremateng/","image":"https://caribbeantechcollective.com/img/rhianna.webp","jobTitle":["Co-founder","Head of Community"],"worksFor":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"Event","@id":"https://caribbeantechcollective.com/events/#event","name":"Caribbean Tech Collective Events","url":"https://caribbeantechcollective.com/events/","organizer":{"@id":"https://caribbeantechcollective.com/#org"}},{"@type":"WebPage","@id":"https://caribbeantechcollective.com/events/#webpage","url":"https://caribbeantechcollective.com/events/","name":"Events | Caribbean Tech Collective","isPartOf":{"@id":"https://caribbeantechcollective.com/#website"},"about":[{"@id":"https://caribbeantechcollective.com/#org"}],"inLanguage":"en-GB","description":"Events for Caribbean professionals. We connect Caribbean professionals, founders, engineers and investors in technology.","primaryImageOfPage":{"@type":"ImageObject","url":"https://caribbeantechcollective.com/img/967A4321.webp"}},{"@type":"BreadcrumbList","@id":"https://caribbeantechcollective.com/events/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://caribbeantechcollective.com/"},{"@type":"ListItem","position":2,"name":"Events","item":"https://caribbeantechcollective.com/events/"}]}]}</script>
+</head>
+<body class="ctc-pad ctc-page"><a href="#main" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+<div class="noise-overlay" id="main"></div>
+<!-- Header -->
+<header class="ctc-hdr" id="ctcHeader" role="banner">
+<div class="ctc-hdr__inner">
+<div class="ctc-hdr__left">
+<a aria-label="Caribbean Tech Collective home" class="ctc-hdr__logo" href="/">
+        CTC
+      </a>
+<!-- Breadcrumb (desktop only via CSS) -->
+<!--   <nav class="ctc-hdr__crumbs" aria-label="Breadcrumb">
+        <a class="ctc-hdr__crumb" href="/">About</a>
+     <span class="ctc-hdr__crumbSep" aria-hidden="true">/</span>
+        <a class="ctc-hdr__crumb ctc-hdr__crumb--current" href="#" aria-current="page">Page</a>
+      </nav>-->
+</div>
+<!-- Desktop nav -->
+<nav aria-label="Primary" class="ctc-hdr__nav">
+<a class="ctc-hdr__link" href="/team/">Team</a>
+<a class="ctc-hdr__link" href="/about/">About</a>
+<a class="ctc-hdr__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Become a Member</a>
+</nav>
+<!-- Mobile toggle -->
+<button aria-controls="ctcMobileMenu" aria-expanded="false" aria-label="Open menu" class="ctc-hdr__toggle" id="ctcMobileToggle" type="button">
+<span aria-hidden="true" class="ctc-hdr__burger"></span>
+</button>
+</div>
+<!-- Mobile menu -->
+<nav aria-hidden="true" aria-label="Mobile menu" class="ctc-mnav" id="ctcMobileMenu">
+<a class="ctc-mnav__link" href="/team/">About</a>
+<a class="ctc-mnav__link" href="/team/">Team</a>
+<a class="ctc-mnav__cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform">Become a Member</a>
+</nav>
+</header>
+<nav class="app-dock">
+<a class="dock-item" href="/events/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z"></path></svg>
+<span>Events</span>
+</a>
+<a class="dock-item" href="/team/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"></path></svg>
+<span>Team</span>
+</a>
+<a class="dock-item dock-home" href="/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path></svg>
+</a>
+<a class="dock-item" href="/about/">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path></svg>
+<span>About</span>
+</a>
+<a class="dock-item" href="https://docs.google.com/forms/d/e/1FAIpQLSdbC_ztMd1371WmyGpWhyoLPshSi4rWUejyKyXn-JhaCa5uCw/viewform" rel="noopener" target="_blank">
+<svg class="dock-icon" viewbox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path></svg>
+<span>Join</span>
+</a>
+</nav>
+<section class="hero-wrapper">
+<img alt="Community" class="hero-img" decoding="async" loading="lazy" src="/img/967A4321.webp"/>
+<div class="hero-overlay">
+<h1 class="hero-title">Events</h1>
+</div>
+</section>
+<div class="events-modern-wrapper">
+<div class="sticky-filter-bar">
+<button class="filter-pill active" data-filter="upcoming">Upcoming</button>
+<button class="filter-pill" data-filter="past">Past</button>
+</div>
+<div class="events-container" id="eventsList">
+<a class="event-row-card" data-status="upcoming" href="https://luma.com/y9h94ped" target="_blank" rel="noopener noreferrer">
+<div class="date-box">
+<span class="db-month">Feb</span>
+<span class="db-day">26</span>
+</div>
+<div class="img-box">
+<img alt="Deliveroo Mixer" class="evt-img" decoding="async" loading="lazy" src="/cards/967A4223.webp"/>
+</div>
+<div class="content-box">
+<div class="tag-line">Panel + Mixer <span class="tag-dot"></span> London</div>
+<h3 class="evt-title">Product Mixer: Deliveroo x CTC</h3>
+<div class="evt-loc">London HQ • In Person</div>
+</div>
+<div class="action-box">
+<span class="rsvp-btn">Register</span>
+</div>
+</a>
+<div class="event-row-card" data-status="upcoming">
+<div class="date-box">
+<span class="db-month">Planning</span>
+<span class="db-day">Q2</span>
+</div>
+<div class="img-box">
+<img alt="Hackathon" class="evt-img" decoding="async" loading="lazy" src="/img/DSCF8125.webp"/>
+</div>
+<div class="content-box">
+<div class="tag-line">Build <span class="tag-dot"></span>London</div>
+<h3 class="evt-title">Hackathon 2026</h3>
+<div class="evt-loc">In Person</div>
+</div>
+<div class="action-box">
+<span class="rsvp-btn">Planning</span>
+</div>
+</div>
+<div class="event-row-card" data-status="upcoming">
+<div class="date-box">
+<span class="db-month">Planning</span>
+<span class="db-day">Q2</span>
+</div>
+<div class="img-box">
+<img alt="Community" class="evt-img" decoding="async" loading="lazy" src="/cards/967A4391.webp"/>
+</div>
+<div class="content-box">
+<div class="tag-line">Community<span class="tag-dot"></span> London</div>
+<h3 class="evt-title">Indo-Caribbean Mixer</h3>
+<div class="evt-loc">In Person</div>
+</div>
+<div class="action-box">
+<span class="rsvp-btn">Planning</span>
+</div>
+</div>
+<div class="event-row-card" data-status="upcoming">
+<div class="date-box">
+<span class="db-month">planning</span>
+<span class="db-day">Q3</span>
+</div>
+<div class="img-box">
+<img alt="Procurement" class="evt-img" decoding="async" loading="lazy" src="/cards/967A4170.webp"/>
+</div>
+<div class="content-box">
+<div class="tag-line">Mixer + Social <span class="tag-dot"></span>London</div>
+<h3 class="evt-title">Summer Mixer</h3>
+<div class="evt-loc">In Person</div>
+</div>
+<div class="action-box">
+<span class="rsvp-btn">Planning</span>
+</div>
+</div>
+<div class="event-row-card past hidden" data-status="past">
+<div class="date-box">
+<span class="db-month">October</span>
+<span class="db-day">30</span>
+</div>
+<div class="img-box">
+<img alt="Tequila Mixer" class="evt-img" decoding="async" loading="lazy" src="/cards/967A4385.webp"/>
+</div>
+<div class="content-box">
+<div class="tag-line">Specialist Mixer<span class="tag-dot"></span> London</div>
+<h3 class="evt-title">AI &amp; Data Science</h3>
+<div class="evt-loc">+150 attended</div>
+</div>
+<div class="action-box">
+<button class="rsvp-btn disabled">Ended</button>
+</div>
+</div>
+<div class="event-row-card past hidden" data-status="past">
+<div class="date-box">
+<span class="db-month">July</span>
+<span class="db-day">3</span>
+</div>
+<div class="img-box">
+<img alt="Tequila Mixer" class="evt-img" decoding="async" loading="lazy" src="/cards/967A4385.webp"/>
+</div>
+<div class="content-box">
+<div class="tag-line">Networking<span class="tag-dot"></span> London</div>
+<h3 class="evt-title">Networking Mixer for Caribbean Professionals</h3>
+<div class="evt-loc">+80 attended</div>
+</div>
+<div class="action-box">
+<button class="rsvp-btn disabled">Ended</button>
+</div>
+</div>
+</div>
+</div>
+<section class="speakers-section">
+<div class="section-header">
+<h2 class="unified-headline">Past Speakers</h2>
+<p>We've hosted industry leaders from top global companies.</p>
+</div>
+<div class="speakers-grid">
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/danielle-belgrave.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Dr. Danielle Belgrave</div>
+<div class="speaker-role">VP of Artificial Intelligence &amp; Machine Learning, GSK</div>
+</div>
+</div>
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/cheyenne-polius.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Cheyenne Polius</div>
+<div class="speaker-role">Astrophysicist and Founder of LUNAA Journey</div>
+</div>
+</div>
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/jonathan-bourne.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Dr. Jonathan Bourne</div>
+<div class="speaker-role">Phd Data Scientist, Honorary Research Fellow</div>
+</div>
+</div>
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/anthony-cape.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Anthony Cape</div>
+<div class="speaker-role">VP Data Scientist,<br/>Finance</div>
+</div>
+</div>
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/evelkah-powell.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Evelkah Powell</div>
+<div class="speaker-role">Founder, Cohesia Connect, Caribbean Corporate Babe</div>
+</div>
+</div>
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/leif-ollivierre.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Leif Ollivierre</div>
+<div class="speaker-role">Founder,<br/>Naxxar Technologies</div>
+</div>
+</div>
+<div class="speaker-card">
+<img alt="Speaker" class="speaker-img" decoding="async" loading="lazy" src="/img/thorton-paul.webp"/>
+<div class="speaker-overlay">
+<div class="speaker-name">Thorton Paul</div>
+<div class="speaker-role">Senior Account Executive, Google</div>
+</div>
+</div>
+</div>
+</section>
+<!--
+<section class="testimonials-section">
+  <div class="section-header" style="margin-bottom: 40px; text-align: left;">
+    <h2 class="unified-headline">What People Say</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="test-card">
+      <p class="test-text">"Finally, a space where Caribbean excellence in tech is the norm, not the exception."</p>
+      <div class="test-author">Kadeem Campbell — Founder</div>
+    </div>
+    <div class="test-card">
+      <p class="test-text">"The events are high-signal, no fluff, just real connections."</p>
+      <div class="test-author">Jenai Edwards — Designer</div>
+    </div>
+    <div class="test-card">
+      <p class="test-text">"It's the ecosystem we've been waiting for, built by us, for us."</p>
+      <div class="test-author">Rhianna K — Analyst</div>
+    </div>
+  </div>
+</section>
+-->
+<footer role="contentinfo">
+<div class="footer-ctc-footer-with-form">
+<div class="footer">
+<section class="footer-sc">
+<div class="full-container footer-s">
+<div class="container footer-s">
+<div class="footer-top">
+<div class="headline-h4">Contact Us</div>
+<div class="footer-email-row"><a class="footer-mail-2" href="mailto:team@caribbeantechcollective.com" aria-label="Email Caribbean Tech Collective">team@caribbeantechcollective.com</a><button class="footer-copy-btn" type="button" aria-label="Copy email address" data-copy="team@caribbeantechcollective.com">Copy</button></div>
+</div>
+<div class="ctc-vision-cursor"><p></p></div>
+<div class="footer-down">
+<div class="footer-info-block">
+<div class="footer-terms-links"></div>
+<div class="terms-link"></div>
+</div>
+<div aria-label="Social media links" class="footer-media-links" role="navigation">
+<a aria-label="Caribbean Tech Collective on TikTok" class="f-media-link w-inline-block" href="https://www.tiktok.com/@caribbeantechcollective?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="currentColor" height="100%" viewbox="0 0 22 23" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(4, -2.5) scale(0.62)">
+<path d="M16.656 1.029c1.637-0.025 3.262-0.012 4.886-0.025 0.054 2.031 0.878 3.859 2.189 5.213l-0.002-0.002c1.411 1.271 3.247 2.095 5.271 2.235l0.028 0.002v5.036c-1.912-0.048-3.71-0.489-5.331-1.247l0.082 0.034c-0.784-0.377-1.447-0.764-2.077-1.196l0.052 0.034c-0.012 3.649 0.012 7.298-0.025 10.934-0.103 1.853-0.719 3.543-1.707 4.954l0.020-0.031c-1.652 2.366-4.328 3.919-7.371 4.011l-0.014 0c-0.123 0.006-0.268 0.009-0.414 0.009-1.73 0-3.347-0.482-4.725-1.319l0.040 0.023c-2.508-1.509-4.238-4.091-4.558-7.094l-0.004-0.041c-0.025-0.625-0.037-1.25-0.012-1.862 0.49-4.779 4.494-8.476 9.361-8.476 0.547 0 1.083 0.047 1.604 0.136l-0.056-0.008c0.025 1.849-0.050 3.699-0.050 5.548-0.423-0.153-0.911-0.242-1.42-0.242-1.868 0-3.457 1.194-4.045 2.861l-0.009 0.030c-0.133 0.427-0.21 0.918-0.21 1.426 0 0.206 0.013 0.41 0.037 0.61l-0.002-0.024c0.332 2.046 2.086 3.59 4.201 3.59 0.061 0 0.121-0.001 0.181-0.004l-0.009 0c1.463-0.044 2.733-0.831 3.451-1.994l0.010-0.018c0.267-0.372 0.45-0.822 0.511-1.311l0.001-0.014c0.125-2.237 0.075-4.461 0.087-6.698 0.012-5.036-0.012-10.060 0.025-15.083z"></path>
+</g>
+</svg>
+</div>
+</a>
+<a aria-label="Caribbean Tech Collective on Instagram" class="f-media-link w-inline-block" href="https://instagram.com/caribbeantechcollective?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 12C15 12.5933 14.8241 13.1734 14.4944 13.6667C14.1648 14.1601 13.6962 14.5446 13.1481 14.7716C12.5999 14.9987 11.9967 15.0581 11.4147 14.9424C10.8328 14.8266 10.2982 14.5409 9.87868 14.1213C9.45912 13.7018 9.1734 13.1672 9.05764 12.5853C8.94189 12.0033 9.0013 11.4001 9.22836 10.8519C9.45542 10.3038 9.83994 9.83524 10.3333 9.50559C10.8266 9.17595 11.4067 9 12 9C12.7949 9.00247 13.5565 9.31934 14.1186 9.88141C14.6807 10.4435 14.9975 11.2051 15 12ZM21.375 7.875V16.125C21.375 17.5174 20.8219 18.8527 19.8373 19.8373C18.8527 20.8219 17.5174 21.375 16.125 21.375H7.875C6.48261 21.375 5.14726 20.8219 4.16269 19.8373C3.17812 18.8527 2.625 17.5174 2.625 16.125V7.875C2.625 6.48261 3.17812 5.14726 4.16269 4.16269C5.14726 3.17812 6.48261 2.625 7.875 2.625H16.125C17.5174 2.625 18.8527 3.17812 19.8373 4.16269C20.8219 5.14726 21.375 6.48261 21.375 7.875ZM16.5 12C16.5 11.11 16.2361 10.24 15.7416 9.49993C15.2471 8.75991 14.5443 8.18314 13.7221 7.84254C12.8998 7.50195 11.995 7.41283 11.1221 7.58647C10.2492 7.7601 9.44736 8.18868 8.81802 8.81802C8.18868 9.44736 7.7601 10.2492 7.58647 11.1221C7.41283 11.995 7.50195 12.8998 7.84254 13.7221C8.18314 14.5443 8.75991 15.2471 9.49993 15.7416C10.24 16.2361 11.11 16.5 12 16.5C13.1935 16.5 14.3381 16.0259 15.182 15.182C16.0259 14.3381 16.5 13.1935 16.5 12ZM18 7.125C18 6.9025 17.934 6.68499 17.8104 6.49998C17.6868 6.31498 17.5111 6.17078 17.3055 6.08564C17.1 6.00049 16.8738 5.97821 16.6555 6.02162C16.4373 6.06502 16.2368 6.17217 16.0795 6.3295C15.9222 6.48684 15.815 6.68729 15.7716 6.90552C15.7282 7.12375 15.7505 7.34995 15.8356 7.55552C15.9208 7.76109 16.065 7.93679 16.25 8.0604C16.435 8.18402 16.6525 8.25 16.875 8.25C17.1734 8.25 17.4595 8.13147 17.6705 7.9205C17.8815 7.70952 18 7.42337 18 7.125Z" fill="currentColor"></path>
+</svg>
+</div>
+</a>
+<a aria-label="Caribbean Tech Collective on LinkedIn" class="f-media-link w-inline-block" href="https://www.linkedin.com/company/caribbean-tech-collective/?utm_source=caribbeantechcollective.com" rel="noopener noreferrer external" target="_blank">
+<div class="media-link-svg w-embed">
+<svg fill="none" height="100%" viewbox="0 0 24 24" width="100%" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1316_1677)">
+<path d="M22.2234 0H1.77187C0.792187 0 0 0.773438 0 1.72969V22.2656C0 23.2219 0.792187 24 1.77187 24H22.2234C23.2031 24 24 23.2219 24 22.2703V1.72969C24 0.773438 23.2031 0 22.2234 0ZM7.12031 20.4516H3.55781V8.99531H7.12031V20.4516ZM5.33906 7.43438C4.19531 7.43438 3.27188 6.51094 3.27188 5.37187C3.27188 4.23281 4.19531 3.30937 5.33906 3.30937C6.47813 3.30937 7.40156 4.23281 7.40156 5.37187C7.40156 6.50625 6.47813 7.43438 5.33906 7.43438ZM20.4516 20.4516H16.8937V14.8828C16.8937 13.5562 16.8703 11.8453 15.0422 11.8453C13.1906 11.8453 12.9094 13.2937 12.9094 14.7891V20.4516H9.35625V8.99531H12.7687V10.5609H12.8156C13.2891 9.66094 14.4516 8.70938 16.1813 8.70938C19.7859 8.70938 20.4516 11.0813 20.4516 14.1656V20.4516Z" fill="white"></path>
+</g>
+<defs>
+<clippath id="clip0_1316_1677">
+<rect fill="white" height="24" width="24"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</footer>
+<div class="ctc-footer-video-wrap">
+<video autoplay="" class="ctc-new-footer-video" loop="" muted="" playsinline="" poster="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" preload="none">
+<source src="/vids/ctc.webm" type="video/webm"/>
+<source src="/vids/ctc.mp4" type="video/mp4"/>
+</video>
+    <a class="ctc-footer-signature" href="https://uk.linkedin.com/in/kadeem-" target="_blank" rel="me noopener">Built by Kadeem</a>
+<div class="ctc-new-footer-fade"></div>
+</div>
+<script>
+// Filter Logic for New Event System
+const filterPills = document.querySelectorAll('.filter-pill');
+const eventCards = document.querySelectorAll('.event-row-card');
+
+filterPills.forEach(pill => {
+  pill.addEventListener('click', () => {
+    // 1. Activate Pill
+    filterPills.forEach(p => p.classList.remove('active'));
+    pill.classList.add('active');
+
+    const filterVal = pill.getAttribute('data-filter');
+
+    // 2. Filter Rows
+    eventCards.forEach(card => {
+      const status = card.getAttribute('data-status');
+      if (status === filterVal) {
+        card.classList.remove('hidden');
+        // Simple animation
+        gsap.fromTo(card, {opacity: 0, y: 10}, {opacity: (status === 'past' ? 0.6 : 1), y: 0, duration: 0.3});
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+// Header Scroll (Retained)
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  const header = document.querySelector(".drive-header");
+  
+  if (currentScroll > 50 && currentScroll > lastScroll) {
+    header.classList.add("nav-down");
+    header.classList.remove("nav-up");
+  } else {
+    header.classList.add("nav-up");
+    header.classList.remove("nav-down");
+  }
+  lastScroll = currentScroll;
+});
+</script>
+<script data-sw="ctc">if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{});});}</script><script id="footer-email-copy">
+(() => {
+  const btn = document.querySelector('[data-copy-email-btn]') || document.querySelector('.footer-copy-btn');
+  if (!btn) return;
+
+  const email = btn.getAttribute('data-copy') || '';
+  const defaultLabel = btn.getAttribute('data-default-label') || btn.textContent || 'Copy';
+  const copiedLabel = btn.getAttribute('data-copied-label') || 'Copied';
+  let t;
+
+  const write = async (value) => {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(value);
+      return;
+    }
+    const ta = document.createElement('textarea');
+    ta.value = value;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'absolute';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    document.body.removeChild(ta);
+  };
+
+  btn.addEventListener('click', async () => {
+    clearTimeout(t);
+    try {
+      await write(email);
+      btn.textContent = copiedLabel;
+      btn.setAttribute('aria-label', copiedLabel);
+      t = setTimeout(() => {
+        btn.textContent = defaultLabel;
+        btn.setAttribute('aria-label', defaultLabel);
+      }, 1400);
+    } catch (_) {
+      btn.textContent = defaultLabel;
+      btn.setAttribute('aria-label', defaultLabel);
+    }
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+[build]
+  publish = "."
+
+# Keep all routing static. Do not enable SPA fallback.
+# Redirect and header rules are managed via _redirects and _headers.
+
+[context.production]
+  environment = { }
+
+[context.deploy-preview]
+  environment = { }
+
+[context.branch-deploy]
+  environment = { }

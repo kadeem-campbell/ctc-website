@@ -1,0 +1,11 @@
+.DS_Store
+**/.DS_Store
+node_modules/
+.netlify/
+*.log
+img/
+cards/
+vids/
+Documents/
+_media_originals/
+.DS_Store
